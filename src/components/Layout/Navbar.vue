@@ -1,3 +1,6 @@
+<script setup>
+import { RouterLink } from "vue-router";
+</script>
 <template>
   <header
     class="fixed top-0 left-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-gray-100"
@@ -12,10 +15,18 @@
       <nav
         class="hidden lg:flex items-center gap-10 text-sm font-medium text-gray-700"
       >
-        <a href="#" class="hover:text-[#0A1B47] transition">Destinations</a>
-        <a href="#" class="hover:text-[#0A1B47] transition">Experiences</a>
-        <a href="#" class="hover:text-[#0A1B47] transition">Stays</a>
-        <a href="#" class="hover:text-[#0A1B47] transition">About Us</a>
+        <RouterLink to="/" class="hover:text-[#0A1B47] transition"
+          >Destinations</RouterLink
+        >
+        <RouterLink to="/experience" class="hover:text-[#0A1B47] transition"
+          >Experiences</RouterLink
+        >
+        <RouterLink to="stays" class="hover:text-[#0A1B47] transition"
+          >Stays</RouterLink
+        >
+        <RouterLink to="/about" class="hover:text-[#0A1B47] transition"
+          >About Us</RouterLink
+        >
       </nav>
       <!-- Actions -->
       <div class="flex items-center gap-4">
