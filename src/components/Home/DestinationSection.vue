@@ -4,28 +4,27 @@ const destinations = [
     title: "Siem Reap",
     description: "The gateway to the Angkor ruins and vibrant Khmer culture.",
     image:
-      "https://images.unsplash.com/photo-1608037521244-f1c6c7635194?q=80&w=1200&auto=format&fit=crop",
+      "https://rootsabroadtravel.com/wp-content/uploads/2024/03/Wonderful-Things-to-Do-in-Siem-Reap-Cambodia-Beyond-Angkor-Wat.jpg",
   },
 
   {
     title: "Koh Rong",
     description: "Island escapes and azure waters.",
     image:
-      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1200&auto=format&fit=crop",
+      "https://www.i-escape.com/image/hotel/the-royal-sands/overview/323118.jpg",
   },
 
   {
     title: "Kampot",
     description: "Colonial charm and pepper plantations.",
-    image:
-      "https://images.unsplash.com/photo-1493558103817-58b2924bce98?q=80&w=1200&auto=format&fit=crop",
+    image: "https://www.khmertimeskh.com/wp-content/uploads/2024/09/88558.jpg",
   },
 
   {
     title: "Kep",
     description: "Seaside elegance and world-famous crab markets.",
     image:
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop",
+      "https://www.asiakingtravel.com/cuploads/files/Kep-2(1).jpg",
   },
 ];
 </script>
@@ -33,7 +32,6 @@ const destinations = [
 <template>
   <section class="py-24 bg-[#F7F7F5]">
     <div class="max-w-7xl mx-auto px-6 lg:px-10">
-      <!-- Heading -->
       <div class="mb-14">
         <h2 class="text-4xl md:text-5xl font-bold text-[#0A1B47]">
           Explore the Kingdom
@@ -45,7 +43,6 @@ const destinations = [
         </p>
       </div>
 
-      <!-- REAL MATCHING GRID -->
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
         <!-- Siem Reap -->
         <div

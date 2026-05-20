@@ -8,7 +8,7 @@ import { RouterLink } from "vue-router";
     <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
       <!-- Logo -->
       <div>
-        <h1 class="text-3xl font-bold text-[#0A1B47]">KhmerStay</h1>
+        <h class="text-3xl font-bold text-[#0A1B47]">KhmerStay</h>
       </div>
 
       <!-- Navigation -->

@@ -1,6 +1,5 @@
 <script setup>
 import StayListingCard from "./StayListingCard.vue";
-
 const hotels = [
   {
     id: 1,
@@ -21,12 +20,29 @@ const hotels = [
     image:
       "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=1200&auto=format&fit=crop",
   },
+  {
+    id: 2,
+    title: "Heritage Suites Boutique",
+    location: "City Center, Siem Reap",
+    rating: "Excellent 9.2",
+    price: "$120 / night",
+    image:
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=1200&auto=format&fit=crop",
+  },
+  {
+    id: 2,
+    title: "Heritage Suites Boutique",
+    location: "City Center, Siem Reap",
+    rating: "Excellent 9.2",
+    price: "$120 / night",
+    image:
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=1200&auto=format&fit=crop",
+  },
 ];
 </script>
 
 <template>
   <div>
-    <!-- Header -->
     <div class="flex items-center justify-between mb-8">
       <h1 class="text-3xl font-bold text-[#0A1B47]">34 Stays in Siem Reap</h1>
 
@@ -39,7 +55,6 @@ const hotels = [
       </div>
     </div>
 
-    <!-- Cards -->
     <div class="space-y-8">
       <StayListingCard v-for="hotel in hotels" :key="hotel.id" :hotel="hotel" />
     </div>

@@ -5,7 +5,7 @@ import { Wifi, UtensilsCrossed, Waves } from "@lucide/vue";
 <template>
   <div class="sticky top-24">
     <div class="bg-white rounded-[28px] p-8">
-      <h2 class="text-4xl font-bold text-[#0A1B47]">Filters</h2>
+      <h2 class="text-3xl font-bold text-[#0A1B47]">Filters</h2>
 
       <!-- Price -->
       <div class="mt-12">

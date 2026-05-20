@@ -3,6 +3,8 @@ import Home from "../views/Home.vue";
 import Experience from "../views/Experience.vue";
 import About from "../views/About.vue";
 import Stays from "../views/Stays.vue";
+import HotelDetail from "../views/HotelDetail.vue";
+import ExperienceBooking from "../views/ExperienceBooking.vue";
 
 const routes = [
   {
@@ -25,6 +27,16 @@ const routes = [
     path: "/about",
     name: "About",
     component: About,
+  },
+  {
+    path: "/hoteldetail",
+    name: "HotelDetail",
+    component: HotelDetail,
+  },
+  {
+    path: "/experiencedetail",
+    name: "ExperienceBooking",
+    component:ExperienceBooking,
   },
 ];
 
