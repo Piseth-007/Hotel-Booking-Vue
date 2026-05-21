@@ -1,7 +1,7 @@
 <script setup>
+import BookingSummary from "../common/BookingSummary.vue";
 import AboutSanctuary from "../HotelDetail/AboutSanctuary.vue";
 import AmenitySection from "../HotelDetail/AmenitySection.vue";
-import BookingSidebar from "../HotelDetail/BookingSidebar.vue";
 import DetailGallery from "../HotelDetail/DetailGallery.vue";
 import PolicySection from "../HotelDetail/PolicySection.vue";
 import RoomSelection from "../HotelDetail/RoomSelection.vue";
@@ -18,7 +18,23 @@ import RoomSelection from "../HotelDetail/RoomSelection.vue";
           <PolicySection />
         </div>
         <div>
-          <BookingSidebar />
+          <BookingSummary
+            image="https://images.unsplash.com/photo-1573843981267-be1999ff37cd?q=80&w=1200&auto=format&fit=crop"
+            title="Angkor Serenity Boutique"
+            location="Siem Reap, Cambodia"
+            type="Luxury Hotel"
+            price="$450"
+            priceLabel="night"
+            startDate="Dec 12, 2024"
+            endDate="Dec 15, 2024"
+            :features="['Pool Villa', 'Breakfast', 'Airport Pickup']"
+            :pricing="[
+              { label: '3 Nights × $450', price: '$1,350.00' },
+              { label: 'Resort Fee', price: '$45.00' },
+              { label: 'Taxes & Service', price: '$139.50' },
+            ]"
+            total="$1,534.50"
+          />
         </div>
       </div>
     </div>

@@ -1,9 +1,13 @@
 <script setup>
 import { Star } from "@lucide/vue";
+import router from "../router";
 
 defineProps({
   experience: Object,
 });
+const gotoDetail = () =>{
+  router.push("/experiencedetail");
+}
 </script>
 
 <template>
@@ -49,6 +53,7 @@ defineProps({
 
       <button
         class="mt-6 w-full bg-[#0A1B47] hover:bg-[#132B66] transition text-white py-3 rounded-xl font-semibold"
+        @click="gotoDetail"
       >
         Book Experience
       </button>

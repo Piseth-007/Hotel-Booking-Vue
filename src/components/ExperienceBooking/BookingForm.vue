@@ -24,7 +24,7 @@ import { Calendar, Minus, Plus } from "@lucide/vue";
         <h3 class="font-semibold text-[#0A1B47]">PARTICIPANTS</h3>
 
         <div
-          class="mt-4 border border-gray-200 rounded-2xl px-5 py-5 flex items-center justify-between"
+          class="mt-4 border border-gray-200 rounded-2xl px-3 py-3 flex items-center justify-between"
         >
           <div>
             <p class="text-gray-500">Total Guests</p>

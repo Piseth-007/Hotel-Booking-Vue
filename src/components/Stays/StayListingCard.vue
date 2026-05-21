@@ -7,10 +7,15 @@ import {
   UtensilsCrossed,
   Flower2,
 } from "@lucide/vue";
+import router from "../router";
 
 defineProps({
   hotel: Object,
 });
+
+const gotoViewDetail = () =>{
+  router.push("/hoteldetail")
+}
 </script>
 
 <template>
@@ -86,6 +91,7 @@ defineProps({
 
         <!-- Button -->
         <button
+          @click="gotoViewDetail"
           class="bg-[#0A1B47] hover:bg-[#132B66] transition text-white px-8 py-4 rounded-2xl font-semibold"
         >
           View Details

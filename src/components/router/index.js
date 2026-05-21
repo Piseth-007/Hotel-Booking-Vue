@@ -5,6 +5,8 @@ import About from "../views/About.vue";
 import Stays from "../views/Stays.vue";
 import HotelDetail from "../views/HotelDetail.vue";
 import ExperienceBooking from "../views/ExperienceBooking.vue";
+import PaymentLayout from "../Payments/PaymentLayout.vue";
+import GuestDetail from "../views/GuestDetail.vue";
 
 const routes = [
   {
@@ -37,6 +39,16 @@ const routes = [
     path: "/experiencedetail",
     name: "ExperienceBooking",
     component:ExperienceBooking,
+  },
+  {
+    path:"/paymentlayout",
+    name:"PaymentLayout",
+    component:PaymentLayout,
+  },
+  {
+    path:"/guestdetail",
+    name:"GuestDetail",
+    component:GuestDetail,
   },
 ];
 
