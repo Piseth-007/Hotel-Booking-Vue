@@ -1,217 +1,313 @@
-// data/stays.js
-
-export const stays = [
+export const stay = [
   {
     id: 1,
-
-    // Basic Info
     title: "Viroth's Hotel & Resort",
     slug: "viroth-hotel-resort",
-
     destination: "siem-reap",
-
+    type: "Luxury Resort",
+    stars: 5,
+    featured: true,
+    trending: true,
     location: {
       city: "Siem Reap",
       country: "Cambodia",
       address: "2.5km from Angkor Wat",
     },
-
-    // Media
+    coordinates: {
+      lat: 13.4125,
+      lng: 103.8667,
+    },
+    nearbyLandmarks: ["Angkor Wat", "Pub Street", "Old Market"],
     image:
       "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1400&auto=format&fit=crop",
-
     gallery: [
       "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1400&auto=format&fit=crop",
       "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=1400&auto=format&fit=crop",
       "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?q=80&w=1400&auto=format&fit=crop",
     ],
-
-    // Price
     price: 245,
-    priceLabel: "night",
+    oldPrice: 320,
     currency: "USD",
-
-    // Rating
+    priceLabel: "night",
+    taxesIncluded: false,
     rating: 8.9,
     ratingText: "Very Good",
-
-    // Stay Info
-    type: "Luxury Resort",
-    stars: 5,
-
-    // Amenities
+    reviews: 1245,
+    description: "Elegant luxury resort near Angkor Wat with tropical gardens.",
+    available: true,
+    roomsLeft: 4,
+    cancellation: "Free cancellation available",
     amenities: [
+      { name: "Swimming Pool", icon: "waves" },
+      { name: "Free WiFi", icon: "wifi" },
+      { name: "Spa", icon: "flower" },
+      { name: "Restaurant", icon: "utensils" },
+    ],
+    rooms: [
       {
-        name: "Swimming Pool",
-        icon: "waves",
-      },
-
-      {
-        name: "Free WiFi",
-        icon: "wifi",
-      },
-
-      {
-        name: "Spa",
-        icon: "flower",
-      },
-
-      {
-        name: "Restaurant",
-        icon: "utensils",
+        id: 1,
+        title: "Garden Heritage Suite",
+        image:
+          "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200&auto=format&fit=crop",
+        oldPrice: 320,
+        price: 285,
+        badges: ["Free Breakfast", "Free Cancellation"],
+        details: "1 King Bed • 2 Adults • 65 m²",
       },
     ],
-
-    // Nearby
-    nearbyLandmarks: ["Angkor Wat", "Pub Street", "Old Market"],
-
-    // Booking
-    available: true,
-
-    roomsLeft: 4,
-
-    cancellation: "Free cancellation available",
-
-    // Description
-    description:
-      "Elegant luxury resort near Angkor Wat with tropical gardens, spa facilities, and premium Khmer hospitality.",
-
-    // Review
-    reviews: 1245,
-
-    featured: true,
-
-    trending: true,
+    policies: [
+      {
+        title: "Check-in / Check-out",
+        items: ["Check-in: 3PM", "Check-out: 12PM"],
+      },
+    ],
+    host: {
+      name: "KhmerStay Luxury Collection",
+      joined: "Since 2018",
+      responseRate: "99%",
+      responseTime: "within 1 hour",
+    },
+    reviewsData: [],
   },
 
   {
     id: 2,
-
     title: "Angkor Paradise Villa",
-
     slug: "angkor-paradise-villa",
-
     destination: "siem-reap",
-
+    type: "Boutique Hotel",
+    stars: 4,
+    featured: false,
+    trending: false,
     location: {
       city: "Siem Reap",
       country: "Cambodia",
       address: "Near Pub Street",
     },
-
+    coordinates: {
+      lat: 13.355,
+      lng: 103.856,
+    },
+    nearbyLandmarks: ["Pub Street", "Night Market"],
     image:
       "https://images.unsplash.com/photo-1582719508461-905c673771fd?q=80&w=1400&auto=format&fit=crop",
-
-    gallery: [],
-
-    price: 120,
-
-    priceLabel: "night",
-
-    currency: "USD",
-
-    rating: 9.2,
-
-    ratingText: "Excellent",
-
-    type: "Boutique Hotel",
-
-    stars: 4,
-
-    amenities: [
-      {
-        name: "Free Breakfast",
-        icon: "utensils",
-      },
-
-      {
-        name: "Free WiFi",
-        icon: "wifi",
-      },
+    gallery: [
+      "https://images.unsplash.com/photo-1582719508461-905c673771fd?q=80&w=1400&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1400&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=1400&auto=format&fit=crop",
     ],
-
-    nearbyLandmarks: ["Pub Street", "Night Market"],
-
-    available: true,
-
-    roomsLeft: 2,
-
-    cancellation: "Non-refundable",
-
-    description: "Modern boutique stay in the heart of Siem Reap nightlife.",
-
+    price: 120,
+    oldPrice: 180,
+    currency: "USD",
+    priceLabel: "night",
+    taxesIncluded: true,
+    rating: 9.2,
+    ratingText: "Excellent",
     reviews: 842,
-
-    featured: false,
-
-    trending: false,
+    description: "Modern boutique stay in the heart of Siem Reap nightlife.",
+    available: true,
+    roomsLeft: 2,
+    cancellation: "Non-refundable",
+    amenities: [
+      { name: "Free Breakfast", icon: "utensils" },
+      { name: "Free WiFi", icon: "wifi" },
+    ],
+    rooms: [],
+    policies: [],
+    host: {},
+    reviewsData: [],
   },
 
   {
     id: 3,
-
     title: "Koh Rong Ocean Escape",
-
     slug: "koh-rong-ocean-escape",
-
     destination: "koh-rong",
-
+    type: "Beach Resort",
+    stars: 5,
+    featured: true,
+    trending: true,
     location: {
       city: "Koh Rong",
       country: "Cambodia",
       address: "Long Beach",
     },
-
+    coordinates: {
+      lat: 10.695,
+      lng: 103.242,
+    },
+    nearbyLandmarks: ["Long Beach"],
     image:
       "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1400&auto=format&fit=crop",
-
-    gallery: [],
-
-    price: 310,
-
-    priceLabel: "night",
-
-    currency: "USD",
-
-    rating: 9.5,
-
-    ratingText: "Exceptional",
-
-    type: "Beach Resort",
-
-    stars: 5,
-
-    amenities: [
-      {
-        name: "Private Beach",
-        icon: "waves",
-      },
-
-      {
-        name: "Cocktail Bar",
-        icon: "glass-water",
-      },
-
-      {
-        name: "Free WiFi",
-        icon: "wifi",
-      },
+    gallery: [
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1400&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1496417263034-38ec4f0b665a?q=80&w=1400&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1519046904884-53103b34b206?q=80&w=1400&auto=format&fit=crop",
     ],
-
-    nearbyLandmarks: ["Long Beach"],
-
-    available: true,
-
-    roomsLeft: 6,
-
-    cancellation: "Free cancellation available",
-
-    description: "Luxury beachfront villas with crystal-clear ocean views.",
-
+    price: 310,
+    oldPrice: 420,
+    currency: "USD",
+    priceLabel: "night",
+    taxesIncluded: false,
+    rating: 9.5,
+    ratingText: "Exceptional",
     reviews: 2150,
+    description: "Luxury beachfront villas with crystal-clear ocean views.",
+    available: true,
+    roomsLeft: 6,
+    cancellation: "Free cancellation available",
+    amenities: [
+      { name: "Private Beach", icon: "waves" },
+      { name: "Cocktail Bar", icon: "glass-water" },
+      { name: "Free WiFi", icon: "wifi" },
+    ],
+    rooms: [],
+    policies: [],
+    host: {},
+    reviewsData: [],
+  },
 
+  {
+    id: 4,
+    title: "Phnom Penh Royal Palace Hotel",
+    slug: "phnom-penh-royal-palace-hotel",
+    destination: "phnom-penh",
+    type: "City Hotel",
+    stars: 5,
     featured: true,
+    trending: false,
+    location: {
+      city: "Phnom Penh",
+      country: "Cambodia",
+      address: "Near Royal Palace",
+    },
+    coordinates: {
+      lat: 11.5564,
+      lng: 104.9282,
+    },
+    nearbyLandmarks: ["Royal Palace", "Riverside"],
+    image:
+      "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?q=80&w=1400&auto=format&fit=crop",
+    gallery: [
+      "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?q=80&w=1400&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?q=80&w=1400&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1522798514-97ceb8c4f1c8?q=80&w=1400&auto=format&fit=crop",
+    ],
+    price: 185,
+    oldPrice: 240,
+    currency: "USD",
+    priceLabel: "night",
+    taxesIncluded: true,
+    rating: 8.7,
+    ratingText: "Excellent",
+    reviews: 950,
+    description: "Luxury city hotel overlooking Phnom Penh riverside.",
+    available: true,
+    roomsLeft: 5,
+    cancellation: "Free cancellation available",
+    amenities: [
+      { name: "Infinity Pool", icon: "waves" },
+      { name: "Gym", icon: "dumbbell" },
+    ],
+    rooms: [],
+    policies: [],
+    host: {},
+    reviewsData: [],
+  },
 
+  {
+    id: 5,
+    title: "Battambang Heritage Stay",
+    slug: "battambang-heritage-stay",
+    destination: "battambang",
+    type: "Heritage Hotel",
+    stars: 4,
+    featured: false,
     trending: true,
+    location: {
+      city: "Battambang",
+      country: "Cambodia",
+      address: "City Center",
+    },
+    coordinates: {
+      lat: 13.0957,
+      lng: 103.2022,
+    },
+    nearbyLandmarks: ["Bamboo Train"],
+    image:
+      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?q=80&w=1400&auto=format&fit=crop",
+    gallery: [
+      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?q=80&w=1400&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1566665797739-1674de7a421a?q=80&w=1400&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1540541338287-41700207dee6?q=80&w=1400&auto=format&fit=crop",
+    ],
+    price: 95,
+    oldPrice: 140,
+    currency: "USD",
+    priceLabel: "night",
+    taxesIncluded: true,
+    rating: 8.5,
+    ratingText: "Very Good",
+    reviews: 640,
+    description: "Traditional Cambodian heritage stay with colonial charm.",
+    available: true,
+    roomsLeft: 3,
+    cancellation: "Free cancellation available",
+    amenities: [
+      { name: "Free WiFi", icon: "wifi" },
+      { name: "Restaurant", icon: "utensils" },
+    ],
+    rooms: [],
+    policies: [],
+    host: {},
+    reviewsData: [],
+  },
+
+  {
+    id: 6,
+    title: "Kampot Riverside Retreat",
+    slug: "kampot-riverside-retreat",
+    destination: "kampot",
+    type: "Eco Resort",
+    stars: 4,
+    featured: true,
+    trending: true,
+    location: {
+      city: "Kampot",
+      country: "Cambodia",
+      address: "Preaek Tuek Chhu",
+    },
+    coordinates: {
+      lat: 10.6104,
+      lng: 104.1815,
+    },
+    nearbyLandmarks: ["Pepper Farm"],
+    image:
+      "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1400&auto=format&fit=crop",
+    gallery: [
+      "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1400&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=1400&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?q=80&w=1400&auto=format&fit=crop",
+    ],
+    price: 140,
+    oldPrice: 190,
+    currency: "USD",
+    priceLabel: "night",
+    taxesIncluded: true,
+    rating: 9.0,
+    ratingText: "Excellent",
+    reviews: 520,
+    description: "Relaxing eco retreat along Kampot riverside.",
+    available: true,
+    roomsLeft: 4,
+    cancellation: "Free cancellation available",
+    amenities: [
+      { name: "Kayak", icon: "waves" },
+      { name: "Free WiFi", icon: "wifi" },
+    ],
+    rooms: [],
+    policies: [],
+    host: {},
+    reviewsData: [],
   },
 ];

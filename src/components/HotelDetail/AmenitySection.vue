@@ -1,27 +1,16 @@
 <script setup>
 import { Waves, Wifi, UtensilsCrossed, Flower2 } from "@lucide/vue";
 
-const amenities = [
-  {
-    title: "Infinity Pool",
-    icon: Waves,
-  },
+defineProps({
+  amenities: Array,
+});
 
-  {
-    title: "Khmer Spa",
-    icon: Flower2,
-  },
-
-  {
-    title: "Gourmet Dining",
-    icon: UtensilsCrossed,
-  },
-
-  {
-    title: "High-speed WiFi",
-    icon: Wifi,
-  },
-];
+const icons = {
+  waves: Waves,
+  wifi: Wifi,
+  utensils: UtensilsCrossed,
+  flower: Flower2,
+};
 </script>
 
 <template>
@@ -31,13 +20,13 @@ const amenities = [
     <div class="grid grid-cols-2 md:grid-cols-4 gap-5 mt-8">
       <div
         v-for="item in amenities"
-        :key="item.title"
+        :key="item.name"
         class="bg-white rounded-3xl p-6 text-center hover:shadow-lg transition"
       >
-        <component :is="item.icon" class="w-7 h-7 mx-auto text-[#B8860B]" />
+        <component :is="icons[item.icon]" class="w-7 h-7 mx-auto text-[#B8860B]" />
 
         <h3 class="mt-5 font-semibold text-[#0A1B47]">
-          {{ item.title }}
+          {{ item.name }}
         </h3>
       </div>
     </div>

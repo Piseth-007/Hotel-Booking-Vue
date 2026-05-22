@@ -1,32 +1,10 @@
 <script setup>
-const policies = [
-  {
-    title: "Check-in / Check-out",
-    items: [
-      "Check-in: 3:00 PM",
-      "Check-out: 12:00 PM",
-      "Express check-in available via App",
-    ],
+const props = defineProps({
+  policies: {
+    type: Array,
+    default: () => [],
   },
-
-  {
-    title: "Children & Extra Beds",
-    items: [
-      "Children under 12 stay free",
-      "Cribs available on request",
-      "Babysitting services offered",
-    ],
-  },
-
-  {
-    title: "Luxury Etiquette",
-    items: [
-      "No pets allowed in suites",
-      "Smoking only in designated areas",
-      "Quiet hours: 10:00 PM - 7:00 AM",
-    ],
-  },
-];
+});
 </script>
 
 <template>
@@ -34,7 +12,7 @@ const policies = [
     <h2 class="text-4xl font-bold text-[#0A1B47]">Essential Policies</h2>
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mt-10">
-      <div v-for="policy in policies" :key="policy.title">
+      <div v-for="policy in props.policies" :key="policy.title">
         <h3 class="text-xl font-semibold text-[#0A1B47]">
           {{ policy.title }}
         </h3>

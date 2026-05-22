@@ -5,9 +5,9 @@ import router from "../router";
 defineProps({
   experience: Object,
 });
-const gotoDetail = () =>{
+const gotoDetail = () => {
   router.push("/experiencedetail");
-}
+};
 </script>
 
 <template>

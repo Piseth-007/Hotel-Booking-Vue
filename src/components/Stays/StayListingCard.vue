@@ -7,15 +7,18 @@ import {
   UtensilsCrossed,
   Flower2,
 } from "@lucide/vue";
-import router from "../router";
 
-defineProps({
+import { useRouter } from "vue-router";
+
+const router = useRouter();
+
+const props = defineProps({
   hotel: Object,
 });
 
-const gotoViewDetail = () =>{
-  router.push("/hoteldetail")
-}
+const gotoViewDetail = (slug) => {
+  router.push(`/stay/${slug}`);
+};
 </script>
 
 <template>
@@ -24,10 +27,7 @@ const gotoViewDetail = () =>{
   >
     <!-- Image -->
     <div class="relative">
-      <img
-        :src="hotel.image"
-        class="w-full h-75 object-cover"
-      />
+      <img :src="hotel.image" class="w-full h-75 object-cover" />
 
       <!-- Rating -->
       <div
@@ -40,7 +40,7 @@ const gotoViewDetail = () =>{
       <div
         class="absolute top-5 right-5 bg-[#B8860B] text-white px-5 py-2 rounded-full font-semibold"
       >
-        {{ hotel.price }}
+        ${{ hotel.price }}
       </div>
     </div>
 
@@ -49,18 +49,15 @@ const gotoViewDetail = () =>{
       <!-- Top -->
       <div class="flex justify-between items-start">
         <div>
-          <h2
-            class="text-3xl font-bold text-[#0A1B47]"
-          >
+          <h2 class="text-3xl font-bold text-[#0A1B47]">
             {{ hotel.title }}
           </h2>
 
-          <div
-            class="flex items-center gap-2 mt-3 text-gray-500"
-          >
+          <div class="flex items-center gap-2 mt-3 text-gray-500">
             <MapPin class="w-4 h-4" />
 
-            {{ hotel.location }}
+            {{ hotel.location.city }},
+            {{ hotel.location.country }}
           </div>
         </div>
 
@@ -70,9 +67,7 @@ const gotoViewDetail = () =>{
       </div>
 
       <!-- Divider -->
-      <div
-        class="border-t border-gray-100 my-6"
-      ></div>
+      <div class="border-t border-gray-100 my-6"></div>
 
       <!-- Bottom -->
       <div class="flex items-center justify-between">
@@ -84,14 +79,12 @@ const gotoViewDetail = () =>{
 
           <Flower2 class="w-5 h-5 text-[#0A1B47]" />
 
-          <UtensilsCrossed
-            class="w-5 h-5 text-[#0A1B47]"
-          />
+          <UtensilsCrossed class="w-5 h-5 text-[#0A1B47]" />
         </div>
 
         <!-- Button -->
         <button
-          @click="gotoViewDetail"
+          @click="gotoViewDetail(hotel.slug)"
           class="bg-[#0A1B47] hover:bg-[#132B66] transition text-white px-8 py-4 rounded-2xl font-semibold"
         >
           View Details

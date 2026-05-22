@@ -31,7 +31,7 @@ const routes = [
     component: About,
   },
   {
-    path: "/hoteldetail",
+    path: "/stay/:slug",
     name: "HotelDetail",
     component: HotelDetail,
   },

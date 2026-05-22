@@ -5,9 +5,9 @@ import GuaranteeBanner from "../ExperienceBooking/GuaranteeBanner.vue";
 import GuestInformation from "../ExperienceBooking/GuestInformation.vue";
 import TourHighlights from "../ExperienceBooking/TourHighlights.vue";
 import router from "../router";
-const gotoPayment = () =>{
-    router.push("/paymentlayout")
-}
+const gotoPayment = () => {
+  router.push("/paymentlayout");
+};
 </script>
 <template>
   <section class="pt-25 py-14">

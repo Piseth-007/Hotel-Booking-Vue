@@ -1,44 +1,6 @@
 <script setup>
 import StayListingCard from "./StayListingCard.vue";
-const hotels = [
-  {
-    id: 1,
-    title: "Viroth's Hotel & Resort",
-    location: "2.5km from Angkor Wat, Siem Reap",
-    rating: "Very Good 8.9",
-    price: "$245 / night",
-    image:
-      "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=1200&auto=format&fit=crop",
-  },
-
-  {
-    id: 2,
-    title: "Heritage Suites Boutique",
-    location: "City Center, Siem Reap",
-    rating: "Excellent 9.2",
-    price: "$120 / night",
-    image:
-      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=1200&auto=format&fit=crop",
-  },
-  {
-    id: 2,
-    title: "Heritage Suites Boutique",
-    location: "City Center, Siem Reap",
-    rating: "Excellent 9.2",
-    price: "$120 / night",
-    image:
-      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=1200&auto=format&fit=crop",
-  },
-  {
-    id: 2,
-    title: "Heritage Suites Boutique",
-    location: "City Center, Siem Reap",
-    rating: "Excellent 9.2",
-    price: "$120 / night",
-    image:
-      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=1200&auto=format&fit=crop",
-  },
-];
+import { stay } from "@/data/stay";
 </script>
 
 <template>
@@ -56,7 +18,7 @@ const hotels = [
     </div>
 
     <div class="space-y-8">
-      <StayListingCard v-for="hotel in hotels" :key="hotel.id" :hotel="hotel" />
+      <StayListingCard v-for="hotel in stay" :key="hotel.id" :hotel="hotel" />
     </div>
   </div>
 </template>

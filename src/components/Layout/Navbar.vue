@@ -1,9 +1,9 @@
 <script setup>
 import { RouterLink } from "vue-router";
 import router from "../router";
-const gotoStays = () =>{
-  router.push("/stays")
-}
+const gotoStays = () => {
+  router.push("/stays");
+};
 </script>
 <template>
   <header
@@ -41,12 +41,13 @@ const gotoStays = () =>{
         </button>
 
         <button
-          class="bg-[#ffffff] hover:bg-[#cf5e21] text-[#cf5321] hover:text-[#132B66] px-6 py-3 rounded-xl text-sm font-semibold transition shadow-lg  border-2 border-[#cf5e21]"
+          class="bg-[#ffffff] hover:bg-[#cf5e21] text-[#cf5321] hover:text-[#132B66] px-6 py-3 rounded-xl text-sm font-semibold transition shadow-lg border border-[#cf5e21]"
         >
           Sign In
         </button>
 
-        <button @click="gotoStays"
+        <button
+          @click="gotoStays"
           class="bg-[#0A1B47] hover:bg-[#132B66] text-white px-6 py-3 rounded-xl text-sm font-semibold transition shadow-lg"
         >
           Book Now
