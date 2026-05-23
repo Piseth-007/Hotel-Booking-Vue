@@ -1,5 +1,6 @@
 <script setup>
-import { stay } from "@/data/stay";
+import { computed } from "vue";
+import { stay } from "@/data/province";
 import { useRoute } from "vue-router";
 import BookingSummary from "../common/BookingSummary.vue";
 import AboutSanctuary from "../HotelDetail/AboutSanctuary.vue";
@@ -8,9 +9,10 @@ import DetailGallery from "../HotelDetail/DetailGallery.vue";
 import PolicySection from "../HotelDetail/PolicySection.vue";
 import RoomSelection from "../HotelDetail/RoomSelection.vue";
 const route = useRoute();
-const hotel = stay.find((item) => item.slug === route.params.slug);
+const hotel = computed(() => {
+  return stay.find((item) => item.slug === route.params.slug);
+});
 </script>
-
 <template>
   <section v-if="hotel" class="py-10 pt-25 bg-[#F7F7F5]">
     <div class="max-w-7xl mx-auto px-6 lg:px-10">
@@ -44,7 +46,7 @@ const hotel = stay.find((item) => item.slug === route.params.slug);
             :location="`${hotel.location.city}, ${hotel.location.country}`"
             :type="hotel.type"
             :price="hotel.price"
-            :priceLabel="hotel.priceLabel"
+            priceLabel="night"
             startDate="Dec 12, 2024"
             endDate="Dec 15, 2024"
             :features="['Pool Villa', 'Breakfast', 'Airport Pickup']"
@@ -70,4 +72,5 @@ const hotel = stay.find((item) => item.slug === route.params.slug);
       </div>
     </div>
   </section>
+  <div v-else class="py-40 text-center">Hotel not found</div>
 </template>

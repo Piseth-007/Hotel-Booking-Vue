@@ -20,40 +20,52 @@ const routes = [
     name: "Experience",
     component: Experience,
   },
+
   {
     path: "/stays",
     name: "Stays",
     component: Stays,
   },
   {
+    path: "/destination/:slug",
+    name: "StaysByDestination",
+    component: Stays,
+  },
+
+  {
     path: "/about",
     name: "About",
     component: About,
   },
+
   {
     path: "/stay/:slug",
     name: "HotelDetail",
     component: HotelDetail,
   },
+
   {
     path: "/experiencedetail",
     name: "ExperienceBooking",
-    component:ExperienceBooking,
+    component: ExperienceBooking,
   },
+
   {
-    path:"/paymentlayout",
-    name:"PaymentLayout",
-    component:PaymentLayout,
+    path: "/paymentlayout",
+    name: "PaymentLayout",
+    component: PaymentLayout,
   },
+
   {
-    path:"/guestdetail",
-    name:"GuestDetail",
-    component:GuestDetail,
+    path: "/guestdetail",
+    name: "GuestDetail",
+    component: GuestDetail,
   },
 ];
 
 const router = createRouter({
   history: createWebHistory(),
+
   routes,
 
   scrollBehavior() {

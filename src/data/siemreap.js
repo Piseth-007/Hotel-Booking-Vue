@@ -1,4 +1,4 @@
-export const stay = [
+export const siemreap = [
   {
     id: 1,
     title: "Viroth's Hotel & Resort",

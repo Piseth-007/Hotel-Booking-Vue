@@ -30,11 +30,5 @@ const icons = {
         </h3>
       </div>
     </div>
-
-    <button
-      class="mt-8 text-[#0A1B47] font-medium hover:text-[#B8860B] transition"
-    >
-      Show all 42 amenities →
-    </button>
   </section>
 </template>

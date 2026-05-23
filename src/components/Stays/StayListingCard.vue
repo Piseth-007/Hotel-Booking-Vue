@@ -12,18 +12,19 @@ import { useRouter } from "vue-router";
 
 const router = useRouter();
 
-const props = defineProps({
+const { hotel } = defineProps({
   hotel: Object,
 });
 
-const gotoViewDetail = (slug) => {
-  router.push(`/stay/${slug}`);
+const gotoViewDetail = () => {
+  router.push(`/stay/${hotel.slug}`);
 };
 </script>
 
 <template>
   <div
-    class="bg-white rounded-[28px] overflow-hidden shadow-sm hover:shadow-xl transition"
+    @click="gotoViewDetail"
+    class="bg-white rounded-[28px] overflow-hidden shadow-sm hover:shadow-xl transition cursor-pointer"
   >
     <!-- Image -->
     <div class="relative">
@@ -46,7 +47,6 @@ const gotoViewDetail = (slug) => {
 
     <!-- Content -->
     <div class="p-7">
-      <!-- Top -->
       <div class="flex justify-between items-start">
         <div>
           <h2 class="text-3xl font-bold text-[#0A1B47]">
@@ -61,17 +61,13 @@ const gotoViewDetail = (slug) => {
           </div>
         </div>
 
-        <Heart
-          class="w-7 h-7 text-gray-400 hover:text-red-500 cursor-pointer"
-        />
+        <Heart class="w-7 h-7 text-gray-400 hover:text-red-500" />
       </div>
 
-      <!-- Divider -->
       <div class="border-t border-gray-100 my-6"></div>
 
       <!-- Bottom -->
       <div class="flex items-center justify-between">
-        <!-- Amenities -->
         <div class="flex items-center gap-5">
           <Waves class="w-5 h-5 text-[#0A1B47]" />
 
@@ -82,9 +78,7 @@ const gotoViewDetail = (slug) => {
           <UtensilsCrossed class="w-5 h-5 text-[#0A1B47]" />
         </div>
 
-        <!-- Button -->
         <button
-          @click="gotoViewDetail(hotel.slug)"
           class="bg-[#0A1B47] hover:bg-[#132B66] transition text-white px-8 py-4 rounded-2xl font-semibold"
         >
           View Details
