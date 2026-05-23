@@ -7,6 +7,7 @@ import HotelDetail from "../views/HotelDetail.vue";
 import ExperienceBooking from "../views/ExperienceBooking.vue";
 import PaymentLayout from "../Payments/PaymentLayout.vue";
 import GuestDetail from "../views/GuestDetail.vue";
+import Confirmation from "../views/Confirmation.vue";
 
 const routes = [
   {
@@ -60,6 +61,11 @@ const routes = [
     path: "/guestdetail",
     name: "GuestDetail",
     component: GuestDetail,
+  },
+  {
+    path: "/confirmation",
+    name: "Confirmation",
+    component: Confirmation ,
   },
 ];
 

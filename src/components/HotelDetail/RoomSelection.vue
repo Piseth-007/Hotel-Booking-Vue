@@ -1,29 +1,24 @@
 <script setup>
-const props = defineProps({
+defineProps({
   rooms: Array,
+  selectedRoom: Object,
 });
+const emit = defineEmits(["select-room"]);
 </script>
-
 <template>
   <section>
     <h2 class="text-4xl font-bold text-[#0A1B47]">Select Your Sanctuary</h2>
-
     <div class="space-y-6 mt-10">
-      <!-- Room -->
       <div
-        v-for="room in props.rooms"
+        v-for="room in rooms"
         :key="room.id"
         class="bg-white rounded-[28px] p-5 flex flex-col md:flex-row md:items-center justify-between gap-6 hover:shadow-lg transition"
       >
-        <!-- LEFT -->
         <div class="flex gap-5">
-          <!-- Image -->
           <img
             :src="room.image"
             class="w-35 h-30 rounded-[20px] object-cover"
           />
-
-          <!-- Info -->
           <div>
             <h3 class="text-2xl font-bold text-[#0A1B47]">
               {{ room.title }}
@@ -33,7 +28,6 @@ const props = defineProps({
               {{ room.details }}
             </p>
 
-            <!-- Badges -->
             <div class="flex gap-3 mt-4 flex-wrap">
               <span
                 v-for="badge in room.badges"
@@ -44,7 +38,6 @@ const props = defineProps({
               </span>
             </div>
 
-            <!-- Price -->
             <div class="mt-5">
               <span class="text-sm text-gray-400 line-through">
                 ${{ room.oldPrice }}
@@ -61,11 +54,14 @@ const props = defineProps({
           </div>
         </div>
 
-        <!-- RIGHT -->
         <button
-          class="bg-[#0A1B47] text-white px-8 py-4 rounded-2xl font-semibold hover:bg-[#132B66] transition"
+          @click="emit('select-room', room)"
+          :class="
+            selectedRoom?.id === room.id ? 'bg-[#B8860B]' : 'bg-[#0A1B47]'
+          "
+          class="text-white px-8 py-4 rounded-2xl font-semibold hover:opacity-90 transition"
         >
-          Select Room
+          {{ selectedRoom?.id === room.id ? "Selected" : "Select Room" }}
         </button>
       </div>
     </div>

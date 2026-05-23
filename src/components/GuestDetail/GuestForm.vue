@@ -1,16 +1,12 @@
 <!-- components/booking/GuestForm.vue -->
 <template>
   <div class="bg-white rounded-3xl p-10 shadow-sm border border-gray-100">
-    <h2 class="text-5xl font-bold text-[#0B1F4D] mb-12">
-      Guest Details
-    </h2>
+    <h2 class="text-5xl font-bold text-[#0B1F4D] mb-12">Guest Details</h2>
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
       <!-- Name -->
       <div>
-        <label class="block text-sm font-semibold mb-3">
-          Full Name
-        </label>
+        <label class="block text-sm font-semibold mb-3"> Full Name </label>
 
         <input
           type="text"
@@ -21,9 +17,7 @@
 
       <!-- Email -->
       <div>
-        <label class="block text-sm font-semibold mb-3">
-          Email Address
-        </label>
+        <label class="block text-sm font-semibold mb-3"> Email Address </label>
 
         <input
           type="email"
@@ -34,9 +28,7 @@
 
       <!-- Phone -->
       <div>
-        <label class="block text-sm font-semibold mb-3">
-          Phone Number
-        </label>
+        <label class="block text-sm font-semibold mb-3"> Phone Number </label>
 
         <input
           type="text"
@@ -64,9 +56,7 @@
 
     <!-- Special Request -->
     <div class="mt-10">
-      <label class="block text-sm font-semibold mb-3">
-        Special Requests
-      </label>
+      <label class="block text-sm font-semibold mb-3"> Special Requests </label>
 
       <textarea
         rows="5"
@@ -78,6 +68,7 @@
     <!-- Button -->
     <div class="flex justify-end mt-10">
       <button
+        @click="emit('continue-payment')"
         class="bg-[#0B1F4D] hover:bg-[#10295f] transition text-white px-10 py-5 rounded-2xl text-lg font-semibold"
       >
         Continue to Payment →
@@ -85,3 +76,6 @@
     </div>
   </div>
 </template>
+<script setup>
+const emit = defineEmits(["continue-payment"]);
+</script>
