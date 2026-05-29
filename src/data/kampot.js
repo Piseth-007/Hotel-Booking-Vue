@@ -41,8 +41,7 @@ export const kampot = [
     ratingText: "Excellent",
     reviews: 520,
 
-    description:
-      "Relaxing eco retreat along Kampot riverside.",
+    description: "Relaxing eco retreat along Kampot riverside.",
 
     available: true,
     roomsLeft: 4,
@@ -100,8 +99,7 @@ export const kampot = [
 
     reviews: 860,
 
-    description:
-      "Luxury private villas surrounded by nature.",
+    description: "Luxury private villas surrounded by nature.",
 
     available: true,
 
@@ -118,5 +116,166 @@ export const kampot = [
     policies: [],
     host: {},
     reviewsData: [],
+  },
+  {
+    id: 3,
+    title: "Bokor Mountain Lodge",
+    slug: "bokor-mountain-lodge",
+    destination: "kampot",
+    type: "Mountain Resort",
+    stars: 4,
+    featured: false,
+    trending: true,
+
+    location: {
+      city: "Kampot",
+      country: "Cambodia",
+      address: "Bokor Mountain Road",
+    },
+
+    coordinates: {
+      lat: 10.617,
+      lng: 104.02,
+    },
+
+    nearbyLandmarks: ["Bokor Mountain", "Popokvil Waterfall"],
+
+    image:
+      "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1400",
+
+    gallery: [
+      "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1400",
+      "https://images.unsplash.com/photo-1522798514-97ceb8c4f1c8?q=80&w=1400",
+    ],
+
+    price: 170,
+    oldPrice: 220,
+
+    currency: "USD",
+
+    priceLabel: "night",
+
+    taxesIncluded: true,
+
+    rating: 8.9,
+
+    ratingText: "Excellent",
+
+    reviews: 230,
+
+    description: "Mountain lodge with panoramic views of Kampot.",
+
+    available: true,
+
+    roomsLeft: 5,
+
+    cancellation: "Free cancellation available",
+
+    amenities: [
+      {
+        name: "Pool",
+        icon: "waves",
+      },
+
+      {
+        name: "Free WiFi",
+        icon: "wifi",
+      },
+
+      {
+        name: "Breakfast",
+        icon: "utensils",
+      },
+    ],
+
+    rooms: [
+      {
+        id: 1,
+
+        name: "Deluxe Room",
+
+        price: 170,
+
+        capacity: "2 Guests",
+
+        size: "35m²",
+
+        beds: "1 King Bed",
+
+        image: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85",
+      },
+
+      {
+        id: 2,
+
+        name: "Family Suite",
+
+        price: 250,
+
+        capacity: "4 Guests",
+
+        size: "55m²",
+
+        beds: "2 Queen Beds",
+
+        image: "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267",
+      },
+    ],
+
+    policies: [
+      {
+        title: "Check In",
+
+        items: ["From 2:00 PM", "ID Required"],
+      },
+
+      {
+        title: "Check Out",
+
+        items: ["Before 12:00 PM"],
+      },
+
+      {
+        title: "Property Rules",
+
+        items: ["No smoking", "Pets not allowed"],
+      },
+    ],
+
+    host: {
+      name: "Sokha Resort Group",
+
+      responseRate: "98%",
+
+      responseTime: "Within 1 hour",
+
+      joined: "Since 2019",
+    },
+
+    reviewsData: [
+      {
+        id: 1,
+
+        name: "David",
+
+        rating: 5,
+
+        comment: "Amazing mountain atmosphere.",
+
+        date: "2026-02-12",
+      },
+
+      {
+        id: 2,
+
+        name: "Maria",
+
+        rating: 4,
+
+        comment: "Very peaceful stay.",
+
+        date: "2026-01-20",
+      },
+    ],
   },
 ];

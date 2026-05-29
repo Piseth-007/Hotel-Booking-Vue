@@ -4,6 +4,7 @@ import { ref } from "vue";
 import { siemreap } from "@/data/siemreap";
 import ResortCard from "./ResortCard.vue";
 const scrollContainer = ref(null);
+
 const scrollLeft = () => {
   scrollContainer.value.scrollBy({
     left: -350,

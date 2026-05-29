@@ -6,9 +6,7 @@ export const kohRong = [
     destination: "koh-rong",
     type: "Beach Resort",
     stars: 5,
-
     featured: true,
-
     trending: true,
 
     location: {
@@ -22,32 +20,29 @@ export const kohRong = [
       lng: 103.242,
     },
 
-    nearbyLandmarks: ["Long Beach"],
+    nearbyLandmarks: ["Long Beach", "Police Beach"],
 
     image:
-      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1400&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1400",
 
-    gallery: [],
+    gallery: [
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1400",
+      "https://images.unsplash.com/photo-1519046904884-53103b34b206?q=80&w=1400",
+    ],
 
     price: 310,
     oldPrice: 420,
-
     currency: "USD",
-
     priceLabel: "night",
-
     taxesIncluded: false,
 
     rating: 9.5,
-
     ratingText: "Exceptional",
-
     reviews: 2150,
 
     description: "Luxury beachfront villas with crystal-clear ocean views.",
 
     available: true,
-
     roomsLeft: 6,
 
     cancellation: "Free cancellation available",
@@ -56,12 +51,61 @@ export const kohRong = [
       { name: "Private Beach", icon: "waves" },
       { name: "Cocktail Bar", icon: "glass-water" },
       { name: "Free WiFi", icon: "wifi" },
+      { name: "Pool", icon: "waves" },
     ],
 
-    rooms: [],
-    policies: [],
-    host: {},
-    reviewsData: [],
+    rooms: [
+      {
+        id: 1,
+        name: "Ocean Villa",
+        price: 310,
+        capacity: "2 Guests",
+        size: "48m²",
+        beds: "1 King Bed",
+        image: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85",
+      },
+      {
+        id: 2,
+        name: "Family Beach Suite",
+        price: 420,
+        capacity: "4 Guests",
+        size: "72m²",
+        beds: "2 Queen Beds",
+        image: "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267",
+      },
+    ],
+
+    policies: [
+      {
+        title: "Check In",
+        items: ["From 2 PM", "Passport required"],
+      },
+      {
+        title: "Check Out",
+        items: ["Before 12 PM"],
+      },
+      {
+        title: "Rules",
+        items: ["No pets", "No smoking indoors"],
+      },
+    ],
+
+    host: {
+      name: "Island Luxury Group",
+      responseRate: "99%",
+      responseTime: "30 mins",
+      joined: "Since 2018",
+    },
+
+    reviewsData: [
+      {
+        id: 1,
+        name: "Lucas",
+        rating: 5,
+        comment: "Beautiful beach and amazing villas.",
+        date: "2026-04-10",
+      },
+    ],
   },
 
   {
@@ -71,9 +115,7 @@ export const kohRong = [
     destination: "koh-rong",
     type: "Private Villas",
     stars: 5,
-
     featured: true,
-
     trending: false,
 
     location: {
@@ -90,7 +132,7 @@ export const kohRong = [
     nearbyLandmarks: ["Palm Beach"],
 
     image:
-      "https://images.unsplash.com/photo-1519046904884-53103b34b206?q=80&w=1400&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1519046904884-53103b34b206?q=80&w=1400",
 
     gallery: [],
 
@@ -98,21 +140,16 @@ export const kohRong = [
     oldPrice: 490,
 
     currency: "USD",
-
     priceLabel: "night",
-
     taxesIncluded: false,
 
     rating: 9.7,
-
     ratingText: "Exceptional",
-
     reviews: 1340,
 
     description: "Ultra luxury island villas with private beachfront access.",
 
     available: true,
-
     roomsLeft: 2,
 
     cancellation: "Free cancellation available",
@@ -123,6 +160,347 @@ export const kohRong = [
       { name: "Free WiFi", icon: "wifi" },
     ],
 
+    rooms: [
+      {
+        id: 1,
+        name: "Luxury Villa",
+        price: 390,
+        capacity: "2 Guests",
+        size: "60m²",
+        beds: "King Bed",
+        image: "https://images.unsplash.com/photo-1445019980597-93fa8acb246c",
+      },
+    ],
+
+    policies: [
+      {
+        title: "Check In",
+        items: ["3 PM"],
+      },
+    ],
+
+    host: {
+      name: "Azure Collection",
+      responseRate: "98%",
+      responseTime: "1 hour",
+      joined: "2017",
+    },
+
+    reviewsData: [
+      {
+        id: 1,
+        name: "Anna",
+        rating: 5,
+        comment: "Worth every dollar.",
+        date: "2026-02-11",
+      },
+    ],
+  },
+
+  {
+    id: 3,
+    title: "Long Beach Paradise Resort",
+    slug: "long-beach-paradise-resort",
+    destination: "koh-rong",
+    type: "Resort",
+    stars: 4,
+    featured: true,
+    trending: true,
+    location: { city: "Koh Rong", country: "Cambodia", address: "Long Beach" },
+    coordinates: { lat: 10.69, lng: 103.24 },
+    nearbyLandmarks: ["Long Beach"],
+    image:
+      "https://images.unsplash.com/photo-1540541338287-41700207dee6?q=80&w=1400",
+    gallery: [],
+    price: 220,
+    oldPrice: 290,
+    currency: "USD",
+    priceLabel: "night",
+    taxesIncluded: true,
+    rating: 9.1,
+    ratingText: "Excellent",
+    reviews: 720,
+    description: "Relaxing tropical beachfront resort.",
+    available: true,
+    roomsLeft: 4,
+    cancellation: "Free cancellation available",
+    amenities: [
+      { name: "Pool", icon: "waves" },
+      { name: "WiFi", icon: "wifi" },
+    ],
+    rooms: [
+      {
+        id: 1,
+        name: "Sea View Room",
+        price: 220,
+        capacity: "2 Guests",
+        size: "36m²",
+        beds: "King Bed",
+        image: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85",
+      },
+    ],
+    policies: [{ title: "Check In", items: ["2 PM"] }],
+    host: {
+      name: "Paradise Hospitality",
+      responseRate: "97%",
+      responseTime: "1 hour",
+      joined: "2019",
+    },
+    reviewsData: [
+      {
+        id: 1,
+        name: "John",
+        rating: 5,
+        comment: "Amazing sunsets.",
+        date: "2026-03-05",
+      },
+    ],
+  },
+
+  {
+    id: 4,
+    title: "White Sand Retreat",
+    slug: "white-sand-retreat",
+    destination: "koh-rong",
+    type: "Boutique Hotel",
+    stars: 4,
+    featured: false,
+    trending: true,
+    location: {
+      city: "Koh Rong",
+      country: "Cambodia",
+      address: "White Sand Beach",
+    },
+    coordinates: { lat: 10.71, lng: 103.23 },
+    nearbyLandmarks: ["White Sand Beach"],
+    image:
+      "https://images.unsplash.com/photo-1496417263034-38ec4f0b665a?q=80&w=1400",
+    gallery: [],
+    price: 180,
+    oldPrice: 240,
+    currency: "USD",
+    priceLabel: "night",
+    taxesIncluded: true,
+    rating: 8.9,
+    ratingText: "Excellent",
+    reviews: 540,
+    description: "Boutique beach escape.",
+    available: true,
+    roomsLeft: 5,
+    cancellation: "Free cancellation available",
+    amenities: [{ name: "Restaurant", icon: "utensils" }],
+    rooms: [],
+    policies: [],
+    host: {},
+    reviewsData: [],
+  },
+
+  {
+    id: 5,
+    title: "Coral Bay Villas",
+    slug: "coral-bay-villas",
+    destination: "koh-rong",
+    type: "Villa Resort",
+    stars: 5,
+    featured: true,
+    trending: false,
+    location: { city: "Koh Rong", country: "Cambodia", address: "Coral Bay" },
+    coordinates: { lat: 10.707, lng: 103.247 },
+    nearbyLandmarks: ["Coral Bay"],
+    image:
+      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=1400",
+    gallery: [],
+    price: 350,
+    oldPrice: 450,
+    currency: "USD",
+    priceLabel: "night",
+    taxesIncluded: false,
+    rating: 9.4,
+    ratingText: "Exceptional",
+    reviews: 620,
+    description: "Luxury coral bay villas.",
+    available: true,
+    roomsLeft: 3,
+    cancellation: "Free cancellation available",
+    amenities: [{ name: "Private Pool", icon: "waves" }],
+    rooms: [],
+    policies: [],
+    host: {},
+    reviewsData: [],
+  },
+
+  {
+    id: 6,
+    title: "Palm Tree Lodge",
+    slug: "palm-tree-lodge",
+    destination: "koh-rong",
+    type: "Lodge",
+    stars: 3,
+    featured: false,
+    trending: false,
+    location: {
+      city: "Koh Rong",
+      country: "Cambodia",
+      address: "Village Area",
+    },
+    coordinates: { lat: 10.7, lng: 103.245 },
+    nearbyLandmarks: ["Village Pier"],
+    image:
+      "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?q=80&w=1400",
+    gallery: [],
+    price: 90,
+    oldPrice: 120,
+    currency: "USD",
+    priceLabel: "night",
+    taxesIncluded: true,
+    rating: 8.2,
+    ratingText: "Good",
+    reviews: 210,
+    description: "Affordable island stay.",
+    available: true,
+    roomsLeft: 10,
+    cancellation: "Free cancellation available",
+    amenities: [{ name: "WiFi", icon: "wifi" }],
+    rooms: [],
+    policies: [],
+    host: {},
+    reviewsData: [],
+  },
+
+  {
+    id: 7,
+    title: "Sunset Island Resort",
+    slug: "sunset-island-resort",
+    destination: "koh-rong",
+    type: "Beach Resort",
+    stars: 5,
+    featured: true,
+    trending: true,
+    location: {
+      city: "Koh Rong",
+      country: "Cambodia",
+      address: "Sunset Beach",
+    },
+    coordinates: { lat: 10.693, lng: 103.236 },
+    nearbyLandmarks: ["Sunset Beach"],
+    image:
+      "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?q=80&w=1400",
+    gallery: [],
+    price: 330,
+    oldPrice: 410,
+    currency: "USD",
+    priceLabel: "night",
+    taxesIncluded: false,
+    rating: 9.6,
+    ratingText: "Exceptional",
+    reviews: 930,
+    description: "Luxury sunsets every evening.",
+    available: true,
+    roomsLeft: 4,
+    cancellation: "Free cancellation available",
+    amenities: [{ name: "Beach", icon: "waves" }],
+    rooms: [],
+    policies: [],
+    host: {},
+    reviewsData: [],
+  },
+
+  {
+    id: 8,
+    title: "Blue Lagoon Resort",
+    slug: "blue-lagoon-resort",
+    destination: "koh-rong",
+    type: "Eco Resort",
+    stars: 4,
+    featured: false,
+    trending: true,
+    location: { city: "Koh Rong", country: "Cambodia", address: "Blue Lagoon" },
+    coordinates: { lat: 10.704, lng: 103.244 },
+    nearbyLandmarks: ["Lagoon"],
+    image:
+      "https://images.unsplash.com/photo-1455587734955-081b22074882?q=80&w=1400",
+    gallery: [],
+    price: 190,
+    oldPrice: 250,
+    currency: "USD",
+    priceLabel: "night",
+    taxesIncluded: true,
+    rating: 8.8,
+    ratingText: "Excellent",
+    reviews: 430,
+    description: "Eco-friendly tropical retreat.",
+    available: true,
+    roomsLeft: 6,
+    cancellation: "Free cancellation available",
+    amenities: [{ name: "Kayak", icon: "waves" }],
+    rooms: [],
+    policies: [],
+    host: {},
+    reviewsData: [],
+  },
+
+  {
+    id: 9,
+    title: "Island Moon Villas",
+    slug: "island-moon-villas",
+    destination: "koh-rong",
+    type: "Luxury Villas",
+    stars: 5,
+    featured: true,
+    trending: false,
+    location: { city: "Koh Rong", country: "Cambodia", address: "Moon Beach" },
+    coordinates: { lat: 10.698, lng: 103.251 },
+    nearbyLandmarks: ["Moon Beach"],
+    image:
+      "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=1400",
+    gallery: [],
+    price: 370,
+    oldPrice: 480,
+    currency: "USD",
+    priceLabel: "night",
+    taxesIncluded: false,
+    rating: 9.5,
+    ratingText: "Exceptional",
+    reviews: 780,
+    description: "Premium island villas.",
+    available: true,
+    roomsLeft: 2,
+    cancellation: "Free cancellation available",
+    amenities: [{ name: "Spa", icon: "flower" }],
+    rooms: [],
+    policies: [],
+    host: {},
+    reviewsData: [],
+  },
+
+  {
+    id: 10,
+    title: "Hidden Paradise Bungalows",
+    slug: "hidden-paradise-bungalows",
+    destination: "koh-rong",
+    type: "Bungalow Resort",
+    stars: 4,
+    featured: false,
+    trending: true,
+    location: { city: "Koh Rong", country: "Cambodia", address: "Hidden Bay" },
+    coordinates: { lat: 10.701, lng: 103.238 },
+    nearbyLandmarks: ["Hidden Bay"],
+    image:
+      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1400",
+    gallery: [],
+    price: 170,
+    oldPrice: 220,
+    currency: "USD",
+    priceLabel: "night",
+    taxesIncluded: true,
+    rating: 8.9,
+    ratingText: "Excellent",
+    reviews: 390,
+    description: "Quiet beach bungalows.",
+    available: true,
+    roomsLeft: 5,
+    cancellation: "Free cancellation available",
+    amenities: [{ name: "Breakfast", icon: "utensils" }],
     rooms: [],
     policies: [],
     host: {},
