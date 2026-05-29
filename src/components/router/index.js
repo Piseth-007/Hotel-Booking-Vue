@@ -5,9 +5,13 @@ import About from "../views/About.vue";
 import Stays from "../views/Stays.vue";
 import HotelDetail from "../views/HotelDetail.vue";
 import ExperienceBooking from "../views/ExperienceBooking.vue";
-import PaymentLayout from "../Payments/PaymentLayout.vue";
 import GuestDetail from "../views/GuestDetail.vue";
 import Confirmation from "../views/Confirmation.vue";
+import PaymentLayout from "@/components/Payments/PaymentLayout.vue";
+import Login from "../views/Login.vue";
+import Signup from "../views/Signup.vue";
+
+import { useAuthStore } from "@/Store/auth.js";
 
 const routes = [
   {
@@ -27,6 +31,7 @@ const routes = [
     name: "Stays",
     component: Stays,
   },
+
   {
     path: "/destination/:slug",
     name: "StaysByDestination",
@@ -35,37 +40,54 @@ const routes = [
 
   {
     path: "/about",
-    name: "About",
     component: About,
   },
 
   {
     path: "/stay/:slug",
-    name: "HotelDetail",
     component: HotelDetail,
   },
 
   {
     path: "/experiencedetail/:slug",
-    name: "ExperienceBooking",
     component: ExperienceBooking,
   },
 
   {
-    path: "/paymentlayout",
-    name: "PaymentLayout",
-    component: PaymentLayout,
+    path: "/guestdetail",
+    component: GuestDetail,
+
+    meta: {
+      auth: true,
+    },
   },
 
   {
-    path: "/guestdetail",
-    name: "GuestDetail",
-    component: GuestDetail,
+    path: "/paymentlayout",
+    component: PaymentLayout,
+
+    meta: {
+      auth: true,
+    },
   },
+
   {
     path: "/confirmation",
-    name: "Confirmation",
-    component: Confirmation ,
+    component: Confirmation,
+
+    meta: {
+      auth: true,
+    },
+  },
+
+  {
+    path: "/login",
+    component: Login,
+  },
+
+  {
+    path: "/signup",
+    component: Signup,
   },
 ];
 
@@ -79,6 +101,17 @@ const router = createRouter({
       top: 0,
     };
   },
+});
+
+
+router.beforeEach((to) => {
+  const auth = useAuthStore();
+
+  if (to.meta.auth && !auth.user) {
+    return {
+      path: "/login",
+    };
+  }
 });
 
 export default router;
