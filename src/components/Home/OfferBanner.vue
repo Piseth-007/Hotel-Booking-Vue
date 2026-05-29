@@ -1,7 +1,6 @@
 <script setup>
 import { Sparkles } from "@lucide/vue";
 </script>
-
 <template>
   <section class="bg-[#3D3425] border-y border-[#5A4B35] backdrop-blur-md">
     <div

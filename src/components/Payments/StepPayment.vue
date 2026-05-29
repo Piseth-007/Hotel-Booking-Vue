@@ -1,17 +1,20 @@
 <script setup>
-const currentStep = 2;
+const props = defineProps({
+  currentStep: {
+    type: Number,
+    default: 1,
+  },
+});
 
 const steps = [
   {
     id: 1,
-    title: "Review",
+    title: "Details",
   },
-
   {
     id: 2,
     title: "Payment",
   },
-
   {
     id: 3,
     title: "Confirm",
@@ -27,32 +30,39 @@ const steps = [
         :key="step.id"
         class="flex items-center"
       >
+        <!-- Circle + Label -->
         <div class="flex flex-col items-center">
           <div
             :class="
-              currentStep === step.id
+              props.currentStep === step.id
                 ? 'bg-[#0A1B47] text-white'
-                : currentStep > step.id
+                : props.currentStep > step.id
                   ? 'bg-green-600 text-white'
                   : 'bg-gray-200 text-gray-500'
             "
             class="w-14 h-14 rounded-full flex items-center justify-center font-bold text-lg transition"
           >
-            <span v-if="currentStep > step.id"> ✓ </span>
+            <span v-if="props.currentStep > step.id"> ✓ </span>
 
             <span v-else>
               {{ step.id }}
             </span>
           </div>
 
-          <span class="mt-4 font-semibold text-[#0A1B47]">
+          <span
+            class="mt-4 font-semibold"
+            :class="
+              props.currentStep === step.id ? 'text-[#0A1B47]' : 'text-gray-500'
+            "
+          >
             {{ step.title }}
           </span>
         </div>
 
+        <!-- Line -->
         <div
           v-if="index !== steps.length - 1"
-          :class="currentStep > step.id ? 'bg-green-600' : 'bg-gray-200'"
+          :class="props.currentStep > step.id ? 'bg-green-600' : 'bg-gray-200'"
           class="w-16 md:w-32 h-0.5 mx-5 transition"
         ></div>
       </div>

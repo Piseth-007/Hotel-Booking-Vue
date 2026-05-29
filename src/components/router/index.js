@@ -46,7 +46,7 @@ const routes = [
   },
 
   {
-    path: "/experiencedetail",
+    path: "/experiencedetail/:slug",
     name: "ExperienceBooking",
     component: ExperienceBooking,
   },

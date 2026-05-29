@@ -2,7 +2,6 @@
 import { Star } from "@lucide/vue";
 import { useRouter } from "vue-router";
 const router = useRouter();
-
 const props = defineProps({
   resort: Object,
 });

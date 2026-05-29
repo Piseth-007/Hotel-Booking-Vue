@@ -1,81 +1,149 @@
-<!-- components/booking/GuestForm.vue -->
+<script setup>
+import { reactive, watch } from "vue";
+import {
+  User,
+  Mail,
+  Phone,
+  Clock3,
+  MessageSquare,
+  ArrowRight,
+} from "@lucide/vue";
+const emit = defineEmits(["continue-payment", "update-guest"]);
+
+const form = reactive({
+  fullName: "",
+  email: "",
+  phone: "",
+  arrival: "I don't know yet",
+  requests: "",
+});
+
+watch(
+  form,
+  () => {
+    emit("update-guest", form);
+  },
+  { deep: true },
+);
+</script>
+
 <template>
-  <div class="bg-white rounded-3xl p-10 shadow-sm border border-gray-100">
-    <h2 class="text-5xl font-bold text-[#0B1F4D] mb-12">Guest Details</h2>
+  <div
+    class="bg-white rounded-4xl p-8 lg:p-10 shadow-sm border border-gray-100"
+  >
+    <!-- Header -->
+    <div class="mb-10">
+      <h2 class="text-3xl font-bold text-[#0B1F4D]">Guest Details</h2>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+      <p class="mt-2 text-gray-500">
+        Tell us who is traveling so we can personalize your stay.
+      </p>
+    </div>
+
+    <!-- Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
       <!-- Name -->
-      <div>
-        <label class="block text-sm font-semibold mb-3"> Full Name </label>
+      <div class="space-y-2">
+        <label class="text-sm font-semibold"> Full Name </label>
 
-        <input
-          type="text"
-          placeholder="John Doe"
-          class="w-full border-b border-gray-300 bg-transparent py-3 outline-none placeholder:text-gray-400"
-        />
+        <div
+          class="flex items-center gap-3 border border-gray-200 rounded-2xl px-4 py-4 focus-within:border-[#0B1F4D]"
+        >
+          <User class="w-5 h-5 text-gray-400" />
+
+          <input
+            v-model="form.fullName"
+            type="text"
+            placeholder="John Doe"
+            class="w-full outline-none"
+          />
+        </div>
       </div>
 
       <!-- Email -->
-      <div>
-        <label class="block text-sm font-semibold mb-3"> Email Address </label>
+      <div class="space-y-2">
+        <label class="text-sm font-semibold"> Email Address </label>
 
-        <input
-          type="email"
-          placeholder="john.doe@example.com"
-          class="w-full border-b border-gray-300 bg-transparent py-3 outline-none placeholder:text-gray-400"
-        />
+        <div
+          class="flex items-center gap-3 border border-gray-200 rounded-2xl px-4 py-4"
+        >
+          <Mail class="w-5 h-5 text-gray-400" />
+
+          <input
+            v-model="form.email"
+            type="email"
+            placeholder="john@example.com"
+            class="w-full outline-none"
+          />
+        </div>
       </div>
 
       <!-- Phone -->
-      <div>
-        <label class="block text-sm font-semibold mb-3"> Phone Number </label>
+      <div class="space-y-2">
+        <label class="text-sm font-semibold"> Phone Number </label>
 
-        <input
-          type="text"
-          placeholder="+855 00 000 000"
-          class="w-full border-b border-gray-300 bg-transparent py-3 outline-none placeholder:text-gray-400"
-        />
+        <div
+          class="flex items-center gap-3 border border-gray-200 rounded-2xl px-4 py-4"
+        >
+          <Phone class="w-5 h-5 text-gray-400" />
+
+          <input
+            v-model="form.phone"
+            type="text"
+            placeholder="+855 xx xxx xxx"
+            class="w-full outline-none"
+          />
+        </div>
       </div>
 
       <!-- Arrival -->
-      <div>
-        <label class="block text-sm font-semibold mb-3">
-          Estimated Arrival Time
-        </label>
+      <div class="space-y-2">
+        <label class="text-sm font-semibold"> Arrival Time </label>
 
-        <select
-          class="w-full border-b border-gray-300 bg-transparent py-3 outline-none text-gray-600"
+        <div
+          class="flex items-center gap-3 border border-gray-200 rounded-2xl px-4 py-4"
         >
-          <option>I don't know yet</option>
-          <option>Morning</option>
-          <option>Afternoon</option>
-          <option>Evening</option>
-        </select>
+          <Clock3 class="w-5 h-5 text-gray-400" />
+
+          <select
+            v-model="form.arrival"
+            class="w-full outline-none bg-transparent"
+          >
+            <option>I don't know yet</option>
+            <option>Morning</option>
+            <option>Afternoon</option>
+            <option>Evening</option>
+          </select>
+        </div>
       </div>
     </div>
 
-    <!-- Special Request -->
-    <div class="mt-10">
-      <label class="block text-sm font-semibold mb-3"> Special Requests </label>
+    <!-- Requests -->
+    <div class="mt-8 space-y-2">
+      <label class="text-sm font-semibold"> Special Requests </label>
 
-      <textarea
-        rows="5"
-        placeholder="Dietary requirements, accessibility needs, or celebrations..."
-        class="w-full border-b border-gray-300 bg-transparent py-3 outline-none resize-none placeholder:text-gray-400"
-      ></textarea>
+      <div class="border border-gray-200 rounded-2xl p-4">
+        <div class="flex gap-3">
+          <MessageSquare class="w-5 h-5 text-gray-400 mt-1" />
+
+          <textarea
+            v-model="form.requests"
+            rows="5"
+            placeholder="Dietary requirements, celebrations, accessibility needs..."
+            class="w-full outline-none resize-none"
+          />
+        </div>
+      </div>
     </div>
 
-    <!-- Button -->
+    <!-- Trust -->
+    <div class="mt-8 bg-[#F7F7F5] rounded-2xl p-5 text-sm text-gray-600">
+      🔒 Your information is encrypted and securely processed.
+    </div>
+
+    <!-- CTA -->
     <div class="flex justify-end mt-10">
-      <button
-        @click="emit('continue-payment')"
-        class="bg-[#0B1F4D] hover:bg-[#10295f] transition text-white px-10 py-5 rounded-2xl text-lg font-semibold"
-      >
-        Continue to Payment →
-      </button>
+      
     </div>
   </div>
 </template>
-<script setup>
-const emit = defineEmits(["continue-payment"]);
-</script>

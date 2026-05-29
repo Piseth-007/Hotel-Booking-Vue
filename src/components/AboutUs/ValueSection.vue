@@ -37,13 +37,11 @@ const values = [
         <h2 class="text-4xl font-bold text-[#0A1B47]">
           The KhmerStay Difference
         </h2>
-
         <p class="mt-3 text-gray-500 text-sm">
           Why travelers choose us for their most precious memories in the
           Kingdom.
         </p>
       </div>
-
       <!-- Cards -->
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-16">
         <div
@@ -57,12 +55,10 @@ const values = [
           >
             <component :is="value.icon" class="w-5 h-5 text-[#B8860B]" />
           </div>
-
           <!-- Content -->
           <h3 class="mt-6 text-xl font-semibold text-[#0A1B47] leading-snug">
             {{ value.title }}
           </h3>
-
           <p class="mt-3 text-gray-500 text-sm leading-6">
             {{ value.description }}
           </p>

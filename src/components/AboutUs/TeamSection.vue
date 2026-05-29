@@ -1,30 +1,28 @@
 <script setup>
 const team = [
   {
-    name: "Sokha Phally",
+    name: "LEANG PISETH",
     role: "Chief Executive Officer",
     description:
       "A Phnom Penh native with 15 years in luxury tourism development across Southeast Asia.",
     image:
-      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1200&auto=format&fit=crop",
+      "/Profile2.jpg",
   },
 
   {
-    name: "Serey Vuthy",
+    name: "SRENG KIMHEANG",
     role: "Director of Experience",
     description:
       "Passionate about preserving Khmer arts, Serey curates our exclusive cultural partnerships.",
-    image:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1200&auto=format&fit=crop",
+    image: "/Profile_Company.png",
   },
 
   {
-    name: "Kosal Samnang",
+    name: "LEANG PISETH",
     role: "Chief Technology Officer",
     description:
       "Ensuring our digital platform remains as smooth and intuitive as luxury hotel check-ins.",
-    image:
-      "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1200&auto=format&fit=crop",
+    image: "/Profile2.jpg",
   },
 ];
 </script>
@@ -47,7 +45,6 @@ const team = [
 
         <div class="hidden lg:block w-70 h-px bg-gray-300"></div>
       </div>
-
       <!-- Cards -->
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-14">
         <div v-for="member in team" :key="member.name">
@@ -59,17 +56,14 @@ const team = [
               class="w-full h-80 object-cover hover:scale-105 transition duration-700"
             />
           </div>
-
           <!-- Content -->
           <div class="mt-5">
             <h3 class="text-xl font-semibold text-[#0A1B47]">
               {{ member.name }}
             </h3>
-
             <p class="mt-1 text-[#B8860B] text-sm font-medium">
               {{ member.role }}
             </p>
-
             <p class="mt-3 text-sm text-gray-500 leading-6">
               {{ member.description }}
             </p>

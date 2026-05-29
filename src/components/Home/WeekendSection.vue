@@ -1,7 +1,6 @@
 <script setup>
 import { Plane, Ticket, UtensilsCrossed } from "@lucide/vue";
 </script>
-
 <template>
   <section class="py-24 bg-[#F7F7F5] overflow-hidden">
     <div class="max-w-7xl mx-auto px-6 lg:px-10">
@@ -16,7 +15,7 @@ import { Plane, Ticket, UtensilsCrossed } from "@lucide/vue";
           <!-- Main Image -->
           <div class="relative overflow-hidden rounded-4xl shadow-2xl">
             <img
-              src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1400&auto=format&fit=crop"
+              src="https://www.pixelstalk.net/wp-content/uploads/images5/4K-Beach-Wallpaper-HD-Free-download.jpg"
               alt="Luxury Weekend"
               class="w-full h-130 object-cover hover:scale-105 transition duration-700"
             />

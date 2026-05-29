@@ -1,59 +1,42 @@
 <script setup>
+import { ref } from "vue";
 import ExperienceCard from "./ExperienceCard.vue";
+import ExperienceFilter from "./ExperienceGategory.vue";
+import { experiences } from "@/data/experience.js";
+const filteredExperiences = ref(experiences);
+const handleFilter = ({ category, search }) => {
+  filteredExperiences.value = experiences.filter((item) => {
+    const categoryMatch =
+      category === "All Experiences" || item.category === category;
 
-const experiences = [
-  {
-    id: 1,
-    title: "Angkor Wat Sunrise Photography Tour",
-    category: "Culture",
-    price: "$45",
-    rating: "4.9",
-    reviews: "120 reviews",
-    image:
-      "https://images.unsplash.com/photo-1608037521244-f1c6c7635194?q=80&w=1200&auto=format&fit=crop",
-  },
+    const searchMatch =
+      item.title.toLowerCase().includes(search.toLowerCase()) ||
+      item.location.city.toLowerCase().includes(search.toLowerCase()) ||
+      item.tags?.some((tag) =>
+        tag.toLowerCase().includes(search.toLowerCase()),
+      );
 
-  {
-    id: 2,
-    title: "Traditional Khmer Cooking Class",
-    category: "Food & Dining",
-    price: "$35",
-    rating: "4.8",
-    reviews: "85 reviews",
-    image:
-      "https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=1200&auto=format&fit=crop",
-  },
-
-  {
-    id: 3,
-    title: "Mekong River Sunset Cruise",
-    category: "Adventure",
-    price: "$25",
-    rating: "4.7",
-    reviews: "210 reviews",
-    image:
-      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1200&auto=format&fit=crop",
-  },
-
-  {
-    id: 4,
-    title: "Phnom Kulen Waterfall Adventure",
-    category: "Adventure",
-    price: "$60",
-    rating: "4.9",
-    reviews: "56 reviews",
-    image:
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop",
-  },
-];
+    return categoryMatch && searchMatch;
+  });
+};
 </script>
 
 <template>
+  <!-- FILTER -->
+  <ExperienceFilter @filter="handleFilter" />
   <section class="py-24">
     <div class="max-w-7xl mx-auto px-6 lg:px-10">
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <!-- Empty State -->
+
+      <div v-if="filteredExperiences.length === 0" class="text-center py-20">
+        <h2 class="text-3xl font-bold text-[#0A1B47]">No experiences found</h2>
+
+        <p class="text-gray-500 mt-4">Try another category or search keyword</p>
+      </div>
+      <!-- Grid -->
+      <div v-else class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         <ExperienceCard
-          v-for="experience in experiences"
+          v-for="experience in filteredExperiences"
           :key="experience.id"
           :experience="experience"
         />

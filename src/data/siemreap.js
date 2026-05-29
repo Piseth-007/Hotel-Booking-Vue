@@ -57,17 +57,102 @@ export const siemreap = [
     ],
     policies: [
       {
-        title: "Check-in / Check-out",
-        items: ["Check-in: 3PM", "Check-out: 12PM"],
+        title: "Check-in & Check-out",
+        items: [
+          "Check-in after 2:00 PM",
+          "Check-out before 12:00 PM",
+          "Early check-in subject to availability",
+        ],
+      },
+
+      {
+        title: "House Rules",
+        items: [
+          "No smoking inside property",
+          "No pets allowed",
+          "Quiet hours after 10:00 PM",
+        ],
+      },
+
+      {
+        title: "Cancellation Policy",
+        items: [
+          "Free cancellation within 48 hours",
+          "50% refund up to 7 days before arrival",
+          "No refund for same-day cancellation",
+        ],
+      },
+
+      {
+        title: "Safety & Property",
+        items: [
+          "Security cameras in common areas",
+          "Fire extinguisher available",
+          "First aid kit provided",
+        ],
+      },
+
+      {
+        title: "Payment",
+        items: [
+          "Credit cards accepted",
+          "Pay at property available",
+          "Deposit may be required",
+        ],
+      },
+
+      {
+        title: "Amenities Usage",
+        items: [
+          "Pool open from 7 AM - 9 PM",
+          "Gym access included",
+          "Free WiFi throughout property",
+        ],
       },
     ],
+
     host: {
-      name: "KhmerStay Luxury Collection",
-      joined: "Since 2018",
-      responseRate: "99%",
-      responseTime: "within 1 hour",
+      name: "Sokha Chan",
+      role: "Super Host",
+      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43",
+      joined: "Joined in 2021",
+      languages: ["Khmer", "English"],
+      responseRate: "98%",
+      responseTime: "Within 1 hour",
     },
-    reviewsData: [],
+
+    reviewsData: [
+      {
+        id: 1,
+        name: "David Kim",
+        country: "South Korea",
+        rating: 5,
+        date: "May 2026",
+        comment:
+          "Amazing stay with beautiful views and very friendly staff. Highly recommended!",
+        avatar: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d",
+      },
+      {
+        id: 2,
+        name: "Sreyneang",
+        country: "Cambodia",
+        rating: 4,
+        date: "April 2026",
+        comment:
+          "Very clean rooms and great location. Breakfast could be improved.",
+        avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330",
+      },
+      {
+        id: 3,
+        name: "John Smith",
+        country: "USA",
+        rating: 5,
+        date: "March 2026",
+        comment:
+          "The host was helpful and the experience exceeded expectations.",
+        avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43",
+      },
+    ],
   },
 
   {
@@ -112,10 +197,116 @@ export const siemreap = [
       { name: "Free Breakfast", icon: "utensils" },
       { name: "Free WiFi", icon: "wifi" },
     ],
-    rooms: [],
-    policies: [],
-    host: {},
-    reviewsData: [],
+    rooms: [
+      {
+        id: 1,
+        title: "Garden Heritage Suite",
+        image:
+          "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200&auto=format&fit=crop",
+        oldPrice: 320,
+        price: 285,
+        badges: ["Free Breakfast", "Free Cancellation"],
+        details: "1 King Bed • 2 Adults • 65 m²",
+      },
+    ],
+    policies: [
+      {
+        title: "Check-in & Check-out",
+        items: [
+          "Check-in after 2:00 PM",
+          "Check-out before 12:00 PM",
+          "Early check-in subject to availability",
+        ],
+      },
+
+      {
+        title: "House Rules",
+        items: [
+          "No smoking inside property",
+          "No pets allowed",
+          "Quiet hours after 10:00 PM",
+        ],
+      },
+
+      {
+        title: "Cancellation Policy",
+        items: [
+          "Free cancellation within 48 hours",
+          "50% refund up to 7 days before arrival",
+          "No refund for same-day cancellation",
+        ],
+      },
+
+      {
+        title: "Safety & Property",
+        items: [
+          "Security cameras in common areas",
+          "Fire extinguisher available",
+          "First aid kit provided",
+        ],
+      },
+
+      {
+        title: "Payment",
+        items: [
+          "Credit cards accepted",
+          "Pay at property available",
+          "Deposit may be required",
+        ],
+      },
+
+      {
+        title: "Amenities Usage",
+        items: [
+          "Pool open from 7 AM - 9 PM",
+          "Gym access included",
+          "Free WiFi throughout property",
+        ],
+      },
+    ],
+
+    host: {
+      name: "Sokha Chan",
+      role: "Super Host",
+      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43",
+      joined: "Joined in 2021",
+      languages: ["Khmer", "English"],
+      responseRate: "98%",
+      responseTime: "Within 1 hour",
+    },
+
+    reviewsData: [
+      {
+        id: 1,
+        name: "David Kim",
+        country: "South Korea",
+        rating: 5,
+        date: "May 2026",
+        comment:
+          "Amazing stay with beautiful views and very friendly staff. Highly recommended!",
+        avatar: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d",
+      },
+      {
+        id: 2,
+        name: "Sreyneang",
+        country: "Cambodia",
+        rating: 4,
+        date: "April 2026",
+        comment:
+          "Very clean rooms and great location. Breakfast could be improved.",
+        avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330",
+      },
+      {
+        id: 3,
+        name: "John Smith",
+        country: "USA",
+        rating: 5,
+        date: "March 2026",
+        comment:
+          "The host was helpful and the experience exceeded expectations.",
+        avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43",
+      },
+    ],
   },
 
   {
@@ -161,10 +352,83 @@ export const siemreap = [
       { name: "Cocktail Bar", icon: "glass-water" },
       { name: "Free WiFi", icon: "wifi" },
     ],
-    rooms: [],
-    policies: [],
-    host: {},
-    reviewsData: [],
+    rooms: [
+      {
+        id: 1,
+        title: "Garden Heritage Suite",
+        image:
+          "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200&auto=format&fit=crop",
+        oldPrice: 320,
+        price: 285,
+        badges: ["Free Breakfast", "Free Cancellation"],
+        details: "1 King Bed • 2 Adults • 65 m²",
+      },
+    ],
+    policies: [
+      {
+        title: "Check-in",
+        description: "Check-in after 2:00 PM",
+      },
+      {
+        title: "Check-out",
+        description: "Check-out before 12:00 PM",
+      },
+      {
+        title: "Cancellation",
+        description: "Free cancellation within 48 hours of booking",
+      },
+      {
+        title: "Pets",
+        description: "Pets are not allowed",
+      },
+      {
+        title: "Smoking",
+        description: "No smoking inside the property",
+      },
+    ],
+
+    host: {
+      name: "Sokha Chan",
+      role: "Super Host",
+      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43",
+      joined: "Joined in 2021",
+      languages: ["Khmer", "English"],
+      responseRate: "98%",
+      responseTime: "Within 1 hour",
+    },
+
+    reviewsData: [
+      {
+        id: 1,
+        name: "David Kim",
+        country: "South Korea",
+        rating: 5,
+        date: "May 2026",
+        comment:
+          "Amazing stay with beautiful views and very friendly staff. Highly recommended!",
+        avatar: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d",
+      },
+      {
+        id: 2,
+        name: "Sreyneang",
+        country: "Cambodia",
+        rating: 4,
+        date: "April 2026",
+        comment:
+          "Very clean rooms and great location. Breakfast could be improved.",
+        avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330",
+      },
+      {
+        id: 3,
+        name: "John Smith",
+        country: "USA",
+        rating: 5,
+        date: "March 2026",
+        comment:
+          "The host was helpful and the experience exceeded expectations.",
+        avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43",
+      },
+    ],
   },
 
   {
@@ -209,10 +473,83 @@ export const siemreap = [
       { name: "Infinity Pool", icon: "waves" },
       { name: "Gym", icon: "dumbbell" },
     ],
-    rooms: [],
-    policies: [],
-    host: {},
-    reviewsData: [],
+    rooms: [
+      {
+        id: 1,
+        title: "Garden Heritage Suite",
+        image:
+          "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200&auto=format&fit=crop",
+        oldPrice: 320,
+        price: 285,
+        badges: ["Free Breakfast", "Free Cancellation"],
+        details: "1 King Bed • 2 Adults • 65 m²",
+      },
+    ],
+    policies: [
+      {
+        title: "Check-in",
+        description: "Check-in after 2:00 PM",
+      },
+      {
+        title: "Check-out",
+        description: "Check-out before 12:00 PM",
+      },
+      {
+        title: "Cancellation",
+        description: "Free cancellation within 48 hours of booking",
+      },
+      {
+        title: "Pets",
+        description: "Pets are not allowed",
+      },
+      {
+        title: "Smoking",
+        description: "No smoking inside the property",
+      },
+    ],
+
+    host: {
+      name: "Sokha Chan",
+      role: "Super Host",
+      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43",
+      joined: "Joined in 2021",
+      languages: ["Khmer", "English"],
+      responseRate: "98%",
+      responseTime: "Within 1 hour",
+    },
+
+    reviewsData: [
+      {
+        id: 1,
+        name: "David Kim",
+        country: "South Korea",
+        rating: 5,
+        date: "May 2026",
+        comment:
+          "Amazing stay with beautiful views and very friendly staff. Highly recommended!",
+        avatar: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d",
+      },
+      {
+        id: 2,
+        name: "Sreyneang",
+        country: "Cambodia",
+        rating: 4,
+        date: "April 2026",
+        comment:
+          "Very clean rooms and great location. Breakfast could be improved.",
+        avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330",
+      },
+      {
+        id: 3,
+        name: "John Smith",
+        country: "USA",
+        rating: 5,
+        date: "March 2026",
+        comment:
+          "The host was helpful and the experience exceeded expectations.",
+        avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43",
+      },
+    ],
   },
 
   {
@@ -257,10 +594,83 @@ export const siemreap = [
       { name: "Free WiFi", icon: "wifi" },
       { name: "Restaurant", icon: "utensils" },
     ],
-    rooms: [],
-    policies: [],
-    host: {},
-    reviewsData: [],
+    rooms: [
+      {
+        id: 1,
+        title: "Garden Heritage Suite",
+        image:
+          "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200&auto=format&fit=crop",
+        oldPrice: 320,
+        price: 285,
+        badges: ["Free Breakfast", "Free Cancellation"],
+        details: "1 King Bed • 2 Adults • 65 m²",
+      },
+    ],
+    policies: [
+      {
+        title: "Check-in",
+        description: "Check-in after 2:00 PM",
+      },
+      {
+        title: "Check-out",
+        description: "Check-out before 12:00 PM",
+      },
+      {
+        title: "Cancellation",
+        description: "Free cancellation within 48 hours of booking",
+      },
+      {
+        title: "Pets",
+        description: "Pets are not allowed",
+      },
+      {
+        title: "Smoking",
+        description: "No smoking inside the property",
+      },
+    ],
+
+    host: {
+      name: "Sokha Chan",
+      role: "Super Host",
+      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43",
+      joined: "Joined in 2021",
+      languages: ["Khmer", "English"],
+      responseRate: "98%",
+      responseTime: "Within 1 hour",
+    },
+
+    reviewsData: [
+      {
+        id: 1,
+        name: "David Kim",
+        country: "South Korea",
+        rating: 5,
+        date: "May 2026",
+        comment:
+          "Amazing stay with beautiful views and very friendly staff. Highly recommended!",
+        avatar: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d",
+      },
+      {
+        id: 2,
+        name: "Sreyneang",
+        country: "Cambodia",
+        rating: 4,
+        date: "April 2026",
+        comment:
+          "Very clean rooms and great location. Breakfast could be improved.",
+        avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330",
+      },
+      {
+        id: 3,
+        name: "John Smith",
+        country: "USA",
+        rating: 5,
+        date: "March 2026",
+        comment:
+          "The host was helpful and the experience exceeded expectations.",
+        avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43",
+      },
+    ],
   },
 
   {
@@ -305,9 +715,82 @@ export const siemreap = [
       { name: "Kayak", icon: "waves" },
       { name: "Free WiFi", icon: "wifi" },
     ],
-    rooms: [],
-    policies: [],
-    host: {},
-    reviewsData: [],
+    rooms: [
+      {
+        id: 1,
+        title: "Garden Heritage Suite",
+        image:
+          "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200&auto=format&fit=crop",
+        oldPrice: 320,
+        price: 285,
+        badges: ["Free Breakfast", "Free Cancellation"],
+        details: "1 King Bed • 2 Adults • 65 m²",
+      },
+    ],
+    policies: [
+      {
+        title: "Check-in",
+        description: "Check-in after 2:00 PM",
+      },
+      {
+        title: "Check-out",
+        description: "Check-out before 12:00 PM",
+      },
+      {
+        title: "Cancellation",
+        description: "Free cancellation within 48 hours of booking",
+      },
+      {
+        title: "Pets",
+        description: "Pets are not allowed",
+      },
+      {
+        title: "Smoking",
+        description: "No smoking inside the property",
+      },
+    ],
+
+    host: {
+      name: "Sokha Chan",
+      role: "Super Host",
+      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43",
+      joined: "Joined in 2021",
+      languages: ["Khmer", "English"],
+      responseRate: "98%",
+      responseTime: "Within 1 hour",
+    },
+
+    reviewsData: [
+      {
+        id: 1,
+        name: "David Kim",
+        country: "South Korea",
+        rating: 5,
+        date: "May 2026",
+        comment:
+          "Amazing stay with beautiful views and very friendly staff. Highly recommended!",
+        avatar: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d",
+      },
+      {
+        id: 2,
+        name: "Sreyneang",
+        country: "Cambodia",
+        rating: 4,
+        date: "April 2026",
+        comment:
+          "Very clean rooms and great location. Breakfast could be improved.",
+        avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330",
+      },
+      {
+        id: 3,
+        name: "John Smith",
+        country: "USA",
+        rating: 5,
+        date: "March 2026",
+        comment:
+          "The host was helpful and the experience exceeded expectations.",
+        avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43",
+      },
+    ],
   },
 ];

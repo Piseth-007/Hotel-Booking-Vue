@@ -5,9 +5,7 @@
         <!-- Mission -->
         <div>
           <div class="w-10 h-0.5 bg-[#B8860B] mb-5"></div>
-
           <h2 class="text-3xl font-bold text-[#0A1B47]">Our Mission</h2>
-
           <p class="mt-5 text-gray-500 leading-7 text-[15px]">
             To seamlessly connect global travelers with the authentic hidden
             gems of Khmer culture. We strive to provide a platform where every
@@ -15,13 +13,10 @@
             Cambodia.
           </p>
         </div>
-
         <!-- Vision -->
         <div>
           <div class="w-10 h-0.5 bg-[#B8860B] mb-5"></div>
-
           <h2 class="text-3xl font-bold text-[#0A1B47]">Our Vision</h2>
-
           <p class="mt-5 text-gray-500 leading-7 text-[15px]">
             To become the world's most trusted gateway to Cambodian luxury and
             heritage. We envision a future where travel empowers local

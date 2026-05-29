@@ -1,337 +1,277 @@
 <script setup>
-import {
-  BadgeCheck,
-  MapPin,
-  BedDouble,
-  Users,
-  CalendarDays,
-  Download,
-  ArrowRight,
-} from "@lucide/vue";
-
+import { BadgeCheck, MapPin, Download } from "@lucide/vue";
+import { ref } from "vue";
 import { useRoute, RouterLink } from "vue-router";
+import StepPayment from "../Payments/StepPayment.vue";
 
 const route = useRoute();
 
+const showPaymentModal = ref(false);
+
 const booking = {
   id: route.query.id || "KS-984210",
-
-  title: route.query.title || "KhmerStay Resort",
-
+  type: route.query.type?.toLowerCase() || "hotel",
+  title: route.query.title || "KhmerStay",
   image:
     route.query.image ||
-    "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1400&auto=format&fit=crop",
-
-  location: route.query.location || "Siem Reap, Cambodia",
-
+    "https://images.unsplash.com/photo-1566073771259-6a8506099945",
+  location: route.query.location || "",
   price: Number(route.query.price) || 0,
-
-  room: route.query.room || "Royal Suite",
-
-  guests: route.query.guests || "2 Adults",
-
-  checkIn: route.query.checkIn || "Dec 12, 2024",
-
-  checkOut: route.query.checkOut || "Dec 15, 2024",
-
+  room: route.query.room || "No Room Selected",
+  guests: route.query.guests || "1",
+  checkIn: route.query.checkIn || "",
+  checkOut: route.query.checkOut || "",
+  date: route.query.date || "",
+  time: route.query.time || "",
   guestName: route.query.guestName || "Guest",
-
   email: route.query.email || "",
-
   phone: route.query.phone || "",
-
   arrival: route.query.arrival || "",
-
   requests: route.query.requests || "",
 };
 </script>
 
 <template>
-  <section
-    class="min-h-screen bg-linear-to-b from-[#F7F7F5] to-[#EFECE6] pt-28 pb-24"
-  >
-    <div class="max-w-7xl mx-auto px-6 lg:px-10">
-      <!-- Steps -->
-      <div class="flex items-center justify-center mb-20">
-        <!-- Step 1 -->
-        <div class="flex flex-col items-center">
-          <div
-            class="w-16 h-16 rounded-full bg-green-600 text-white flex items-center justify-center font-bold text-xl"
-          >
-            ✓
-          </div>
+  <section class="min-h-screen bg-[#F8F6F2] pt-28 pb-20">
+    <div class="max-w-7xl mx-auto px-5">
+      <StepPayment :currentStep="3" />
 
-          <span class="mt-4 font-semibold text-[#0A1B47]"> Details </span>
+      <!-- Banner -->
+
+      <div
+        class="bg-linear-to-r from-[#0A1B47] to-[#122B66] rounded-[36px] p-8 lg:p-10 text-center text-white shadow-xl mt-8"
+      >
+        <div
+          class="w-24 h-24 rounded-full bg-[#B8860B] mx-auto flex items-center justify-center"
+        >
+          <BadgeCheck class="w-12 h-12" />
         </div>
 
-        <div class="w-20 md:w-36 h-0.5 bg-green-600 mx-4"></div>
+        <h1 class="text-4xl lg:text-5xl font-bold mt-6">
+          Booking Confirmed 🎉
+        </h1>
 
-        <!-- Step 2 -->
-        <div class="flex flex-col items-center">
-          <div
-            class="w-16 h-16 rounded-full bg-green-600 text-white flex items-center justify-center font-bold text-xl"
-          >
-            ✓
-          </div>
-
-          <span class="mt-4 font-semibold text-[#0A1B47]"> Payment </span>
-        </div>
-
-        <div class="w-20 md:w-36 h-0.5 bg-[#B8860B] mx-4"></div>
-
-        <!-- Step 3 -->
-        <div class="flex flex-col items-center">
-          <div
-            class="w-16 h-16 rounded-full bg-[#B8860B] text-white flex items-center justify-center font-bold text-xl shadow-lg"
-          >
-            3
-          </div>
-
-          <span class="mt-4 font-semibold text-[#B8860B]"> Confirm </span>
-        </div>
+        <p class="mt-4 text-white/80">
+          Your booking at
+          {{ booking.title }}
+          has been confirmed.
+        </p>
       </div>
 
-      <!-- Hero Card -->
-      <div class="bg-white rounded-[40px] overflow-hidden shadow-sm">
-        <!-- Image -->
-        <div class="relative h-105">
-          <img :src="booking.image" class="w-full h-full object-cover" />
+      <div class="grid lg:grid-cols-3 gap-8 mt-10">
+        <!-- LEFT -->
 
-          <div class="absolute inset-0 bg-black/55"></div>
+        <div class="lg:col-span-2 space-y-8">
+          <div class="bg-white rounded-4xl p-8 shadow-sm">
+            <img
+              :src="booking.image"
+              class="rounded-3xl h-80 w-full object-cover"
+            />
+            <div class="mt-8">
+              <div class="flex justify-between flex-wrap gap-4">
+                <div>
+                  <h2 class="text-4xl font-bold">
+                    {{ booking.title }}
+                  </h2>
+                  <p class="flex gap-2 mt-3 text-gray-500">
+                    <MapPin class="w-5" />
 
-          <div
-            class="absolute inset-0 flex flex-col items-center justify-center text-center px-6"
-          >
-            <div
-              class="w-28 h-28 rounded-full bg-[#B8860B] flex items-center justify-center shadow-2xl"
-            >
-              <BadgeCheck class="w-14 h-14 text-white" />
+                    {{ booking.location }}
+                  </p>
+                </div>
+                <span
+                  class="bg-green-100 text-green-700 px-5 py-3 rounded-full"
+                >
+                  Confirmed
+                </span>
+              </div>
+
+              <!-- Dynamic Grid -->
+              <div
+                class="grid gap-4 mt-8"
+                :class="
+                  booking.type === 'experience'
+                    ? 'grid-cols-1 md:grid-cols-3'
+                    : 'grid-cols-1 md:grid-cols-4'
+                "
+              >
+                <!-- HOTEL -->
+
+                <template v-if="booking.type !== 'experience'">
+                  <div class="bg-[#F7F7F5] p-5 rounded-2xl">
+                    <p class="text-gray-400">Check In</p>
+
+                    <h3 class="font-bold text-xl">
+                      {{ booking.checkIn || "Not Selected" }}
+                    </h3>
+                  </div>
+
+                  <div class="bg-[#F7F7F5] p-5 rounded-2xl">
+                    <p class="text-gray-400">Check Out</p>
+
+                    <h3 class="font-bold text-xl">
+                      {{ booking.checkOut || "Not Selected" }}
+                    </h3>
+                  </div>
+
+                  <div class="bg-[#F7F7F5] p-5 rounded-2xl">
+                    <p class="text-gray-400">Guests</p>
+
+                    <h3 class="font-bold text-xl">
+                      {{ booking.guests }}
+                    </h3>
+                  </div>
+
+                  <div class="bg-[#F7F7F5] p-5 rounded-2xl">
+                    <p class="text-gray-400">Room</p>
+
+                    <h3 class="font-bold text-xl">
+                      {{ booking.room }}
+                    </h3>
+                  </div>
+                </template>
+
+                <!-- EXPERIENCE -->
+
+                <template v-else>
+                  <div class="bg-[#F7F7F5] p-5 rounded-2xl">
+                    <p class="text-gray-400">Date</p>
+
+                    <h3 class="font-bold text-xl">
+                      {{ booking.date }}
+                    </h3>
+                  </div>
+
+                  <div class="bg-[#F7F7F5] p-5 rounded-2xl">
+                    <p class="text-gray-400">Time Slot</p>
+
+                    <h3 class="font-bold text-xl">
+                      {{ booking.time }}
+                    </h3>
+                  </div>
+
+                  <div class="bg-[#F7F7F5] p-5 rounded-2xl">
+                    <p class="text-gray-400">Participants</p>
+
+                    <h3 class="font-bold text-xl">
+                      {{ booking.guests }}
+                    </h3>
+                  </div>
+                </template>
+              </div>
             </div>
+          </div>
 
-            <h1 class="mt-8 text-6xl md:text-7xl font-bold text-white">
-              Booking Confirmed
-            </h1>
+          <div class="grid md:grid-cols-2 gap-5">
+            <button
+              @click="showPaymentModal = true"
+              class="bg-[#0A1B47] text-white py-5 rounded-2xl flex items-center justify-center gap-3"
+            >
+              <Download class="w-5 h-5" />
 
-            <p class="mt-6 text-xl leading-9 text-gray-200 max-w-3xl">
-              Your luxury escape at
-              {{ booking.title }}
-              has been reserved successfully.
-            </p>
+              Download Receipt
+            </button>
+
+            <RouterLink
+              to="/"
+              class="border-2 border-[#0A1B47] rounded-2xl py-5 text-center"
+            >
+              Explore More
+            </RouterLink>
           </div>
         </div>
 
-        <!-- Content -->
-        <div class="p-10 lg:p-14">
-          <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
-            <!-- LEFT -->
-            <div class="lg:col-span-2 space-y-8">
-              <!-- Booking ID -->
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div class="bg-[#F7F7F5] rounded-4xl p-8">
-                  <p class="uppercase text-sm tracking-[0.3em] text-gray-400">
-                    Booking ID
-                  </p>
+        <!-- RIGHT -->
 
-                  <h2 class="mt-5 text-5xl font-bold text-[#0A1B47]">
-                    {{ booking.id }}
-                  </h2>
-                </div>
+        <div>
+          <div class="bg-white p-8 rounded-4xl shadow-sm sticky top-28">
+            <h2 class="font-bold text-2xl">Booking Summary</h2>
 
-                <div class="bg-[#0A1B47] rounded-4xl p-8 text-white">
-                  <p class="uppercase text-sm tracking-[0.3em] text-white/60">
-                    Total Paid
-                  </p>
+            <div class="space-y-5 mt-6">
+              <div>
+                <p class="text-gray-400">Booking ID</p>
 
-                  <h2 class="mt-5 text-5xl font-bold">${{ booking.price }}</h2>
-
-                  <p class="mt-4 text-white/60">Taxes included</p>
-                </div>
+                <h3>
+                  {{ booking.id }}
+                </h3>
               </div>
 
-              <!-- Main Card -->
-              <div class="bg-[#F7F7F5] rounded-[36px] p-8">
-                <!-- Hotel -->
-                <div class="flex items-start justify-between gap-6">
-                  <div>
-                    <h2 class="text-4xl font-bold text-[#0A1B47]">
-                      {{ booking.title }}
-                    </h2>
+              <div>
+                <p class="text-gray-400">Guest</p>
 
-                    <div class="flex items-center gap-3 mt-4 text-gray-500">
-                      <MapPin class="w-5 h-5" />
-
-                      {{ booking.location }}
-                    </div>
-                  </div>
-
-                  <div
-                    class="bg-[#B8860B] text-white px-5 py-3 rounded-full font-semibold"
-                  >
-                    Confirmed
-                  </div>
-                </div>
-
-                <!-- Divider -->
-                <div class="border-t border-gray-200 my-8"></div>
-
-                <!-- Dates -->
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <!-- Check In -->
-                  <div class="bg-white rounded-3xl p-6">
-                    <p class="text-sm uppercase tracking-widest text-gray-400">
-                      Check-In
-                    </p>
-
-                    <h3 class="mt-4 text-2xl font-bold text-[#0A1B47]">
-                      {{ booking.checkIn }}
-                    </h3>
-                  </div>
-
-                  <!-- Check Out -->
-                  <div class="bg-white rounded-3xl p-6">
-                    <p class="text-sm uppercase tracking-widest text-gray-400">
-                      Check-Out
-                    </p>
-
-                    <h3 class="mt-4 text-2xl font-bold text-[#0A1B47]">
-                      {{ booking.checkOut }}
-                    </h3>
-                  </div>
-                </div>
-
-                <!-- Tags -->
-                <div class="flex flex-wrap gap-4 mt-8">
-                  <div
-                    class="bg-white px-5 py-4 rounded-full flex items-center gap-3"
-                  >
-                    <BedDouble class="w-5 h-5 text-[#0A1B47]" />
-
-                    {{ booking.room }}
-                  </div>
-
-                  <div
-                    class="bg-white px-5 py-4 rounded-full flex items-center gap-3"
-                  >
-                    <Users class="w-5 h-5 text-[#0A1B47]" />
-
-                    {{ booking.guests }}
-                  </div>
-
-                  <div
-                    class="bg-white px-5 py-4 rounded-full flex items-center gap-3"
-                  >
-                    <CalendarDays class="w-5 h-5 text-[#0A1B47]" />
-
-                    3 Nights
-                  </div>
-                </div>
+                <h3>
+                  {{ booking.guestName }}
+                </h3>
               </div>
 
-              <!-- Actions -->
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <button
-                  class="bg-[#0A1B47] hover:bg-[#132B66] transition text-white py-5 rounded-2xl font-semibold flex items-center justify-center gap-3"
-                >
-                  <Download class="w-5 h-5" />
+              <div>
+                <p class="text-gray-400">Email</p>
 
-                  Download Receipt
-                </button>
+                <h3>
+                  {{ booking.email }}
+                </h3>
+              </div>
 
-                <RouterLink
-                  to="/"
-                  class="border-2 border-[#0A1B47] text-[#0A1B47] hover:bg-[#0A1B47] hover:text-white transition py-5 rounded-2xl font-semibold flex items-center justify-center gap-3"
-                >
-                  Explore More
+              <div>
+                <p class="text-gray-400">Phone</p>
 
-                  <ArrowRight class="w-5 h-5" />
-                </RouterLink>
+                <h3>
+                  {{ booking.phone }}
+                </h3>
               </div>
             </div>
 
-            <!-- RIGHT -->
-            <div class="space-y-8">
-              <!-- Guest -->
-              <div class="bg-[#F7F7F5] rounded-[36px] p-8">
-                <p class="uppercase text-sm tracking-[0.3em] text-gray-400">
-                  Guest Information
-                </p>
+            <div class="border-t my-6"></div>
 
-                <h2 class="mt-5 text-4xl font-bold text-[#0A1B47]">
-                  {{ booking.guestName }}
-                </h2>
+            <div class="flex justify-between">
+              <span> Total Paid </span>
 
-                <div class="border-t border-gray-200 my-8"></div>
-
-                <div class="space-y-5">
-                  <div>
-                    <p class="text-sm text-gray-400">Email</p>
-
-                    <h3 class="mt-1 font-semibold text-[#0A1B47]">
-                      {{ booking.email }}
-                    </h3>
-                  </div>
-
-                  <div>
-                    <p class="text-sm text-gray-400">Phone</p>
-
-                    <h3 class="mt-1 font-semibold text-[#0A1B47]">
-                      {{ booking.phone }}
-                    </h3>
-                  </div>
-
-                  <div>
-                    <p class="text-sm text-gray-400">Arrival Time</p>
-
-                    <h3 class="mt-1 font-semibold text-[#0A1B47]">
-                      {{ booking.arrival }}
-                    </h3>
-                  </div>
-
-                  <div v-if="booking.requests">
-                    <p class="text-sm text-gray-400">Special Requests</p>
-
-                    <p class="mt-2 leading-7 text-gray-600">
-                      {{ booking.requests }}
-                    </p>
-                  </div>
-                </div>
-
-                <div class="border-t border-gray-200 my-8"></div>
-
-                <div class="flex items-center justify-between">
-                  <span class="text-gray-500"> Status </span>
-
-                  <div
-                    class="bg-green-100 text-green-700 px-4 py-2 rounded-full text-sm font-semibold"
-                  >
-                    Confirmed
-                  </div>
-                </div>
-              </div>
-
-              <!-- QR -->
-              <div
-                class="bg-[#0A1B47] rounded-[36px] p-8 text-center text-white"
-              >
-                <h2 class="text-4xl font-bold">Digital Check-In</h2>
-
-                <div
-                  class="w-60 h-60 mx-auto mt-8 bg-white rounded-[28px] flex items-center justify-center"
-                >
-                  <img
-                    src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=KhmerStay"
-                    class="w-44 h-44"
-                  />
-                </div>
-
-                <p class="mt-8 text-white/70 leading-8">
-                  Scan this code at reception for a seamless arrival experience.
-                </p>
-              </div>
+              <span class="font-bold text-2xl">
+                ${{ Number(booking.price).toLocaleString() }}
+              </span>
             </div>
           </div>
         </div>
       </div>
     </div>
   </section>
+
+  <!-- Modal -->
+
+  <transition name="fade">
+    <div
+      v-if="showPaymentModal"
+      class="fixed inset-0 bg-black/60 flex items-center justify-center z-50 px-5"
+    >
+      <div class="bg-white rounded-4xl p-8 max-w-md w-full">
+        <div
+          class="w-20 h-20 rounded-full bg-green-100 flex items-center justify-center mx-auto"
+        >
+          <BadgeCheck class="w-10 h-10 text-green-600" />
+        </div>
+
+        <h2 class="text-center text-3xl font-bold mt-6">Payment Successful</h2>
+
+        <button
+          class="w-full mt-8 bg-[#0A1B47] text-white py-4 rounded-2xl"
+          @click="showPaymentModal = false"
+        >
+          Continue
+        </button>
+      </div>
+    </div>
+  </transition>
 </template>
+
+<style scoped>
+.fade-enter-active,
+.fade-leave-active {
+  transition: 0.25s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+  transform: scale(0.95);
+}
+</style>

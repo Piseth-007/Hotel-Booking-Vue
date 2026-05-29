@@ -7,52 +7,35 @@ const destinations = [
   {
     title: "Siem Reap",
     slug: "siem-reap",
-
     description: "The gateway to the Angkor ruins and vibrant Khmer culture.",
-
     image:
       "https://rootsabroadtravel.com/wp-content/uploads/2024/03/Wonderful-Things-to-Do-in-Siem-Reap-Cambodia-Beyond-Angkor-Wat.jpg",
-
     className: "lg:col-span-2 h-90",
-
     trending: true,
   },
-
   {
     title: "Koh Rong",
     slug: "koh-rong",
-
     description: "Island escapes and azure waters.",
-
     image:
       "https://www.i-escape.com/image/hotel/the-royal-sands/overview/323118.jpg",
-
     className: "h-90",
   },
-
   {
     title: "Kampot",
     slug: "kampot",
-
     description: "Colonial charm and pepper plantations.",
-
     image: "https://www.khmertimeskh.com/wp-content/uploads/2024/09/88558.jpg",
-
     className: "h-55",
   },
-
   {
     title: "Kep",
     slug: "kep",
-
     description: "Seaside elegance and world-famous crab markets.",
-
     image: "https://www.asiakingtravel.com/cuploads/files/Kep-2(1).jpg",
-
     className: "lg:col-span-2 h-55",
   },
 ];
-
 const gotoDestination = (slug) => {
   router.push(`/destination/${slug}`);
 };

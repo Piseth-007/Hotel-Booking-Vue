@@ -15,7 +15,6 @@
             our global reach, dedicated marketing, and focus on high-end
             travelers who value heritage and quality.
           </p>
-
           <!-- Buttons -->
           <div class="flex flex-wrap gap-4 mt-8">
             <!-- Primary -->
@@ -24,7 +23,6 @@
             >
               Partner with KhmerStay
             </button>
-
             <!-- Secondary -->
             <button
               class="border border-white/20 hover:bg-white/10 transition px-6 py-3 rounded-xl font-medium"
@@ -33,7 +31,6 @@
             </button>
           </div>
         </div>
-
         <!-- Right Card -->
         <div class="bg-[#F8F6F1] rounded-[20px] p-6 w-full max-w-[320px]">
           <div class="space-y-6">
@@ -44,7 +41,6 @@
               >
                 ⚡
               </div>
-
               <div>
                 <h4 class="font-semibold text-[#0A1B47]">Fast Integration</h4>
 
@@ -53,7 +49,6 @@
                 </p>
               </div>
             </div>
-
             <!-- Item -->
             <div class="flex items-start gap-4">
               <div
@@ -61,7 +56,6 @@
               >
                 🏨
               </div>
-
               <div>
                 <h4 class="font-semibold text-[#0A1B47]">Exclusive Access</h4>
 
@@ -70,7 +64,6 @@
                 </p>
               </div>
             </div>
-
             <!-- Item -->
             <div class="flex items-start gap-4">
               <div
