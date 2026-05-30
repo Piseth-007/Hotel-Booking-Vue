@@ -6,23 +6,18 @@ export const kep = [
     destination: "kep",
     type: "Beach Resort",
     stars: 5,
-
     featured: true,
     trending: true,
-
     location: {
       city: "Kep",
       country: "Cambodia",
       address: "Kep Beach",
     },
-
     coordinates: {
       lat: 10.4829,
       lng: 104.3167,
     },
-
     nearbyLandmarks: ["Crab Market", "Kep Beach"],
-
     image:
       "https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?q=80&w=1400&auto=format&fit=crop",
 
@@ -31,28 +26,18 @@ export const kep = [
       "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=1400",
       "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1400",
     ],
-
     price: 210,
     oldPrice: 290,
-
     currency: "USD",
     priceLabel: "night",
-
     taxesIncluded: true,
-
     rating: 9.1,
     ratingText: "Excellent",
-
     reviews: 720,
-
     description: "Luxury beachside resort overlooking Kep coastline.",
-
     available: true,
-
     roomsLeft: 5,
-
     cancellation: "Free cancellation available",
-
     amenities: [
       { name: "Private Beach", icon: "waves" },
       { name: "Spa", icon: "flower" },
@@ -309,8 +294,57 @@ export const kep = [
 
     policies: [
       {
-        title: "Check In",
-        items: ["From 2 PM"],
+        title: "Check-in & Check-out",
+        items: [
+          "Check-in after 2:00 PM",
+          "Check-out before 12:00 PM",
+          "Early check-in subject to availability",
+        ],
+      },
+
+      {
+        title: "House Rules",
+        items: [
+          "No smoking inside property",
+          "No pets allowed",
+          "Quiet hours after 10:00 PM",
+        ],
+      },
+
+      {
+        title: "Cancellation Policy",
+        items: [
+          "Free cancellation within 48 hours",
+          "50% refund up to 7 days before arrival",
+          "No refund for same-day cancellation",
+        ],
+      },
+
+      {
+        title: "Safety & Property",
+        items: [
+          "Security cameras in common areas",
+          "Fire extinguisher available",
+          "First aid kit provided",
+        ],
+      },
+
+      {
+        title: "Payment",
+        items: [
+          "Credit cards accepted",
+          "Pay at property available",
+          "Deposit may be required",
+        ],
+      },
+
+      {
+        title: "Amenities Usage",
+        items: [
+          "Pool open from 7 AM - 9 PM",
+          "Gym access included",
+          "Free WiFi throughout property",
+        ],
       },
     ],
 
@@ -386,8 +420,18 @@ export const kep = [
 
     policies: [
       {
+        title: "Check In",
+        items: ["From 2:00 PM", "Passport required"],
+      },
+
+      {
         title: "Check Out",
-        items: ["Before 12 PM"],
+        items: ["Before 12:00 PM"],
+      },
+
+      {
+        title: "Property Rules",
+        items: ["No smoking indoors", "Pets not allowed"],
       },
     ],
 
@@ -444,8 +488,43 @@ export const kep = [
     roomsLeft: 7,
     cancellation: "Free cancellation available",
     amenities: [{ name: "Restaurant", icon: "utensils" }],
-    rooms: [],
-    policies: [],
+    rooms: [
+      {
+        id: 1,
+        name: "Luxury Sunset Room",
+        price: 260,
+        capacity: "2 Guests",
+        size: "45m²",
+        beds: "1 King Bed",
+        image: "https://images.unsplash.com/photo-1571896349842-33c89424de2d",
+      },
+
+      {
+        id: 2,
+        name: "Premium Villa",
+        price: 360,
+        capacity: "4 Guests",
+        size: "70m²",
+        beds: "2 King Beds",
+        image: "https://images.unsplash.com/photo-1445019980597-93fa8acb246c",
+      },
+    ],
+    policies: [
+      {
+        title: "Check In",
+        items: ["From 2:00 PM", "Passport required"],
+      },
+
+      {
+        title: "Check Out",
+        items: ["Before 12:00 PM"],
+      },
+
+      {
+        title: "Property Rules",
+        items: ["No smoking indoors", "Pets not allowed"],
+      },
+    ],
     host: {},
     reviewsData: [],
   },
@@ -478,8 +557,82 @@ export const kep = [
     roomsLeft: 2,
     cancellation: "Free cancellation available",
     amenities: [{ name: "Private Pool", icon: "waves" }],
-    rooms: [],
-    policies: [],
+    rooms: [
+      {
+        id: 1,
+        name: "Luxury Sunset Room",
+        price: 260,
+        capacity: "2 Guests",
+        size: "45m²",
+        beds: "1 King Bed",
+        image: "https://images.unsplash.com/photo-1571896349842-33c89424de2d",
+      },
+
+      {
+        id: 2,
+        name: "Premium Villa",
+        price: 360,
+        capacity: "4 Guests",
+        size: "70m²",
+        beds: "2 King Beds",
+        image: "https://images.unsplash.com/photo-1445019980597-93fa8acb246c",
+      },
+    ],
+    policies: [
+      {
+        title: "Check-in & Check-out",
+        items: [
+          "Check-in after 2:00 PM",
+          "Check-out before 12:00 PM",
+          "Early check-in subject to availability",
+        ],
+      },
+
+      {
+        title: "House Rules",
+        items: [
+          "No smoking inside property",
+          "No pets allowed",
+          "Quiet hours after 10:00 PM",
+        ],
+      },
+
+      {
+        title: "Cancellation Policy",
+        items: [
+          "Free cancellation within 48 hours",
+          "50% refund up to 7 days before arrival",
+          "No refund for same-day cancellation",
+        ],
+      },
+
+      {
+        title: "Safety & Property",
+        items: [
+          "Security cameras in common areas",
+          "Fire extinguisher available",
+          "First aid kit provided",
+        ],
+      },
+
+      {
+        title: "Payment",
+        items: [
+          "Credit cards accepted",
+          "Pay at property available",
+          "Deposit may be required",
+        ],
+      },
+
+      {
+        title: "Amenities Usage",
+        items: [
+          "Pool open from 7 AM - 9 PM",
+          "Gym access included",
+          "Free WiFi throughout property",
+        ],
+      },
+    ],
     host: {},
     reviewsData: [],
   },
@@ -512,8 +665,82 @@ export const kep = [
     roomsLeft: 4,
     cancellation: "Free cancellation available",
     amenities: [{ name: "Pool", icon: "waves" }],
-    rooms: [],
-    policies: [],
+    rooms: [
+      {
+        id: 1,
+        name: "Luxury Sunset Room",
+        price: 260,
+        capacity: "2 Guests",
+        size: "45m²",
+        beds: "1 King Bed",
+        image: "https://images.unsplash.com/photo-1571896349842-33c89424de2d",
+      },
+
+      {
+        id: 2,
+        name: "Premium Villa",
+        price: 360,
+        capacity: "4 Guests",
+        size: "70m²",
+        beds: "2 King Beds",
+        image: "https://images.unsplash.com/photo-1445019980597-93fa8acb246c",
+      },
+    ],
+    policies: [
+      {
+        title: "Check-in & Check-out",
+        items: [
+          "Check-in after 2:00 PM",
+          "Check-out before 12:00 PM",
+          "Early check-in subject to availability",
+        ],
+      },
+
+      {
+        title: "House Rules",
+        items: [
+          "No smoking inside property",
+          "No pets allowed",
+          "Quiet hours after 10:00 PM",
+        ],
+      },
+
+      {
+        title: "Cancellation Policy",
+        items: [
+          "Free cancellation within 48 hours",
+          "50% refund up to 7 days before arrival",
+          "No refund for same-day cancellation",
+        ],
+      },
+
+      {
+        title: "Safety & Property",
+        items: [
+          "Security cameras in common areas",
+          "Fire extinguisher available",
+          "First aid kit provided",
+        ],
+      },
+
+      {
+        title: "Payment",
+        items: [
+          "Credit cards accepted",
+          "Pay at property available",
+          "Deposit may be required",
+        ],
+      },
+
+      {
+        title: "Amenities Usage",
+        items: [
+          "Pool open from 7 AM - 9 PM",
+          "Gym access included",
+          "Free WiFi throughout property",
+        ],
+      },
+    ],
     host: {},
     reviewsData: [],
   },
@@ -546,8 +773,82 @@ export const kep = [
     roomsLeft: 9,
     cancellation: "Free cancellation available",
     amenities: [{ name: "WiFi", icon: "wifi" }],
-    rooms: [],
-    policies: [],
+    rooms: [
+      {
+        id: 1,
+        name: "Luxury Sunset Room",
+        price: 260,
+        capacity: "2 Guests",
+        size: "45m²",
+        beds: "1 King Bed",
+        image: "https://images.unsplash.com/photo-1571896349842-33c89424de2d",
+      },
+
+      {
+        id: 2,
+        name: "Premium Villa",
+        price: 360,
+        capacity: "4 Guests",
+        size: "70m²",
+        beds: "2 King Beds",
+        image: "https://images.unsplash.com/photo-1445019980597-93fa8acb246c",
+      },
+    ],
+    policies: [
+      {
+        title: "Check-in & Check-out",
+        items: [
+          "Check-in after 2:00 PM",
+          "Check-out before 12:00 PM",
+          "Early check-in subject to availability",
+        ],
+      },
+
+      {
+        title: "House Rules",
+        items: [
+          "No smoking inside property",
+          "No pets allowed",
+          "Quiet hours after 10:00 PM",
+        ],
+      },
+
+      {
+        title: "Cancellation Policy",
+        items: [
+          "Free cancellation within 48 hours",
+          "50% refund up to 7 days before arrival",
+          "No refund for same-day cancellation",
+        ],
+      },
+
+      {
+        title: "Safety & Property",
+        items: [
+          "Security cameras in common areas",
+          "Fire extinguisher available",
+          "First aid kit provided",
+        ],
+      },
+
+      {
+        title: "Payment",
+        items: [
+          "Credit cards accepted",
+          "Pay at property available",
+          "Deposit may be required",
+        ],
+      },
+
+      {
+        title: "Amenities Usage",
+        items: [
+          "Pool open from 7 AM - 9 PM",
+          "Gym access included",
+          "Free WiFi throughout property",
+        ],
+      },
+    ],
     host: {},
     reviewsData: [],
   },
@@ -580,8 +881,82 @@ export const kep = [
     roomsLeft: 5,
     cancellation: "Free cancellation available",
     amenities: [{ name: "Garden", icon: "flower" }],
-    rooms: [],
-    policies: [],
+    rooms: [
+      {
+        id: 1,
+        name: "Luxury Sunset Room",
+        price: 260,
+        capacity: "2 Guests",
+        size: "45m²",
+        beds: "1 King Bed",
+        image: "https://images.unsplash.com/photo-1571896349842-33c89424de2d",
+      },
+
+      {
+        id: 2,
+        name: "Premium Villa",
+        price: 360,
+        capacity: "4 Guests",
+        size: "70m²",
+        beds: "2 King Beds",
+        image: "https://images.unsplash.com/photo-1445019980597-93fa8acb246c",
+      },
+    ],
+    policies: [
+      {
+        title: "Check-in & Check-out",
+        items: [
+          "Check-in after 2:00 PM",
+          "Check-out before 12:00 PM",
+          "Early check-in subject to availability",
+        ],
+      },
+
+      {
+        title: "House Rules",
+        items: [
+          "No smoking inside property",
+          "No pets allowed",
+          "Quiet hours after 10:00 PM",
+        ],
+      },
+
+      {
+        title: "Cancellation Policy",
+        items: [
+          "Free cancellation within 48 hours",
+          "50% refund up to 7 days before arrival",
+          "No refund for same-day cancellation",
+        ],
+      },
+
+      {
+        title: "Safety & Property",
+        items: [
+          "Security cameras in common areas",
+          "Fire extinguisher available",
+          "First aid kit provided",
+        ],
+      },
+
+      {
+        title: "Payment",
+        items: [
+          "Credit cards accepted",
+          "Pay at property available",
+          "Deposit may be required",
+        ],
+      },
+
+      {
+        title: "Amenities Usage",
+        items: [
+          "Pool open from 7 AM - 9 PM",
+          "Gym access included",
+          "Free WiFi throughout property",
+        ],
+      },
+    ],
     host: {},
     reviewsData: [],
   },
@@ -614,8 +989,82 @@ export const kep = [
     roomsLeft: 2,
     cancellation: "Free cancellation available",
     amenities: [{ name: "Private Beach", icon: "waves" }],
-    rooms: [],
-    policies: [],
+    rooms: [
+      {
+        id: 1,
+        name: "Luxury Sunset Room",
+        price: 260,
+        capacity: "2 Guests",
+        size: "45m²",
+        beds: "1 King Bed",
+        image: "https://images.unsplash.com/photo-1571896349842-33c89424de2d",
+      },
+
+      {
+        id: 2,
+        name: "Premium Villa",
+        price: 360,
+        capacity: "4 Guests",
+        size: "70m²",
+        beds: "2 King Beds",
+        image: "https://images.unsplash.com/photo-1445019980597-93fa8acb246c",
+      },
+    ],
+    policies: [
+      {
+        title: "Check-in & Check-out",
+        items: [
+          "Check-in after 2:00 PM",
+          "Check-out before 12:00 PM",
+          "Early check-in subject to availability",
+        ],
+      },
+
+      {
+        title: "House Rules",
+        items: [
+          "No smoking inside property",
+          "No pets allowed",
+          "Quiet hours after 10:00 PM",
+        ],
+      },
+
+      {
+        title: "Cancellation Policy",
+        items: [
+          "Free cancellation within 48 hours",
+          "50% refund up to 7 days before arrival",
+          "No refund for same-day cancellation",
+        ],
+      },
+
+      {
+        title: "Safety & Property",
+        items: [
+          "Security cameras in common areas",
+          "Fire extinguisher available",
+          "First aid kit provided",
+        ],
+      },
+
+      {
+        title: "Payment",
+        items: [
+          "Credit cards accepted",
+          "Pay at property available",
+          "Deposit may be required",
+        ],
+      },
+
+      {
+        title: "Amenities Usage",
+        items: [
+          "Pool open from 7 AM - 9 PM",
+          "Gym access included",
+          "Free WiFi throughout property",
+        ],
+      },
+    ],
     host: {},
     reviewsData: [],
   },
@@ -648,8 +1097,82 @@ export const kep = [
     roomsLeft: 5,
     cancellation: "Free cancellation available",
     amenities: [{ name: "Breakfast", icon: "utensils" }],
-    rooms: [],
-    policies: [],
+    rooms: [
+      {
+        id: 1,
+        name: "Luxury Sunset Room",
+        price: 260,
+        capacity: "2 Guests",
+        size: "45m²",
+        beds: "1 King Bed",
+        image: "https://images.unsplash.com/photo-1571896349842-33c89424de2d",
+      },
+
+      {
+        id: 2,
+        name: "Premium Villa",
+        price: 360,
+        capacity: "4 Guests",
+        size: "70m²",
+        beds: "2 King Beds",
+        image: "https://images.unsplash.com/photo-1445019980597-93fa8acb246c",
+      },
+    ],
+    policies: [
+      {
+        title: "Check-in & Check-out",
+        items: [
+          "Check-in after 2:00 PM",
+          "Check-out before 12:00 PM",
+          "Early check-in subject to availability",
+        ],
+      },
+
+      {
+        title: "House Rules",
+        items: [
+          "No smoking inside property",
+          "No pets allowed",
+          "Quiet hours after 10:00 PM",
+        ],
+      },
+
+      {
+        title: "Cancellation Policy",
+        items: [
+          "Free cancellation within 48 hours",
+          "50% refund up to 7 days before arrival",
+          "No refund for same-day cancellation",
+        ],
+      },
+
+      {
+        title: "Safety & Property",
+        items: [
+          "Security cameras in common areas",
+          "Fire extinguisher available",
+          "First aid kit provided",
+        ],
+      },
+
+      {
+        title: "Payment",
+        items: [
+          "Credit cards accepted",
+          "Pay at property available",
+          "Deposit may be required",
+        ],
+      },
+
+      {
+        title: "Amenities Usage",
+        items: [
+          "Pool open from 7 AM - 9 PM",
+          "Gym access included",
+          "Free WiFi throughout property",
+        ],
+      },
+    ],
     host: {},
     reviewsData: [],
   },
@@ -682,8 +1205,82 @@ export const kep = [
     roomsLeft: 4,
     cancellation: "Free cancellation available",
     amenities: [{ name: "Spa", icon: "flower" }],
-    rooms: [],
-    policies: [],
+    rooms: [
+      {
+        id: 1,
+        name: "Luxury Sunset Room",
+        price: 260,
+        capacity: "2 Guests",
+        size: "45m²",
+        beds: "1 King Bed",
+        image: "https://images.unsplash.com/photo-1571896349842-33c89424de2d",
+      },
+
+      {
+        id: 2,
+        name: "Premium Villa",
+        price: 360,
+        capacity: "4 Guests",
+        size: "70m²",
+        beds: "2 King Beds",
+        image: "https://images.unsplash.com/photo-1445019980597-93fa8acb246c",
+      },
+    ],
+    policies: [
+      {
+        title: "Check-in & Check-out",
+        items: [
+          "Check-in after 2:00 PM",
+          "Check-out before 12:00 PM",
+          "Early check-in subject to availability",
+        ],
+      },
+
+      {
+        title: "House Rules",
+        items: [
+          "No smoking inside property",
+          "No pets allowed",
+          "Quiet hours after 10:00 PM",
+        ],
+      },
+
+      {
+        title: "Cancellation Policy",
+        items: [
+          "Free cancellation within 48 hours",
+          "50% refund up to 7 days before arrival",
+          "No refund for same-day cancellation",
+        ],
+      },
+
+      {
+        title: "Safety & Property",
+        items: [
+          "Security cameras in common areas",
+          "Fire extinguisher available",
+          "First aid kit provided",
+        ],
+      },
+
+      {
+        title: "Payment",
+        items: [
+          "Credit cards accepted",
+          "Pay at property available",
+          "Deposit may be required",
+        ],
+      },
+
+      {
+        title: "Amenities Usage",
+        items: [
+          "Pool open from 7 AM - 9 PM",
+          "Gym access included",
+          "Free WiFi throughout property",
+        ],
+      },
+    ],
     host: {},
     reviewsData: [],
   },

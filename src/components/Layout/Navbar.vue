@@ -19,7 +19,6 @@ const isActive = (path) => {
   return route.path === path;
 };
 </script>
-
 <template>
   <header
     class="fixed top-0 left-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-gray-100"

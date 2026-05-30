@@ -4,7 +4,6 @@ import { useRoute } from "vue-router";
 import { stay } from "@/data/province";
 import FilterSidebar from "@/components/Stays/FilterSidebar.vue";
 import StayList from "@/components/Stays/StayList.vue";
-import MapPreview from "@/components/Stays/MapPreview.vue";
 const route = useRoute();
 const selectedStars = ref([]);
 const selectedAmenities = ref([]);
@@ -42,7 +41,6 @@ const baseHotels = computed(() => {
   return hotels;
 });
 
-
 const filteredHotels = computed(() => {
   return baseHotels.value.filter((hotel) => {
     const priceMatch = hotel.price <= maxPrice.value;
@@ -64,12 +62,8 @@ const filteredHotels = computed(() => {
 
 <template>
   <section class="py-10 pt-28 bg-[#F7F7F5]">
-    <div class="max-w-450 mx-auto px-6">
-
-
+    <div class="w-[80vw] mx-auto px-6">
       <div class="grid grid-cols-12 gap-8">
-        <!-- SIDEBAR -->
-
         <div class="col-span-12 lg:col-span-3">
           <FilterSidebar
             v-model:stars="selectedStars"
@@ -78,16 +72,8 @@ const filteredHotels = computed(() => {
           />
         </div>
 
-        <!-- HOTEL LIST -->
-
-        <div class="col-span-12 lg:col-span-6">
+        <div class="col-span-12 lg:col-span-9">
           <StayList :hotels="filteredHotels" />
-        </div>
-
-        <!-- MAP -->
-
-        <div class="col-span-12 lg:col-span-3">
-          <MapPreview />
         </div>
       </div>
     </div>

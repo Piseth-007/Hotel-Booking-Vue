@@ -14,51 +14,93 @@ export const kampot = [
       country: "Cambodia",
       address: "Preaek Tuek Chhu",
     },
-
     coordinates: {
       lat: 10.6104,
       lng: 104.1815,
     },
-
     nearbyLandmarks: ["Pepper Farm", "Kampot River"],
-
     image:
       "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1400&auto=format&fit=crop",
-
     gallery: [
       "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1400&auto=format&fit=crop",
       "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=1400&auto=format&fit=crop",
       "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?q=80&w=1400&auto=format&fit=crop",
     ],
-
     price: 140,
     oldPrice: 190,
     currency: "USD",
     priceLabel: "night",
     taxesIncluded: true,
-
     rating: 9.0,
     ratingText: "Excellent",
     reviews: 520,
-
     description: "Relaxing eco retreat along Kampot riverside.",
-
     available: true,
     roomsLeft: 4,
-
     cancellation: "Free cancellation available",
-
     amenities: [
       { name: "Kayak", icon: "waves" },
       { name: "Free WiFi", icon: "wifi" },
     ],
-
     rooms: [],
-    policies: [],
+    policies: [
+      {
+        title: "Check-in & Check-out",
+        items: [
+          "Check-in after 2:00 PM",
+          "Check-out before 12:00 PM",
+          "Early check-in subject to availability",
+        ],
+      },
+
+      {
+        title: "House Rules",
+        items: [
+          "No smoking inside property",
+          "No pets allowed",
+          "Quiet hours after 10:00 PM",
+        ],
+      },
+
+      {
+        title: "Cancellation Policy",
+        items: [
+          "Free cancellation within 48 hours",
+          "50% refund up to 7 days before arrival",
+          "No refund for same-day cancellation",
+        ],
+      },
+
+      {
+        title: "Safety & Property",
+        items: [
+          "Security cameras in common areas",
+          "Fire extinguisher available",
+          "First aid kit provided",
+        ],
+      },
+
+      {
+        title: "Payment",
+        items: [
+          "Credit cards accepted",
+          "Pay at property available",
+          "Deposit may be required",
+        ],
+      },
+
+      {
+        title: "Amenities Usage",
+        items: [
+          "Pool open from 7 AM - 9 PM",
+          "Gym access included",
+          "Free WiFi throughout property",
+        ],
+      },
+    ],
     host: {},
     reviewsData: [],
   },
-
   {
     id: 2,
     title: "Pepper Coast Villas",
@@ -68,52 +110,95 @@ export const kampot = [
     stars: 5,
     featured: true,
     trending: false,
-
     location: {
       city: "Kampot",
       country: "Cambodia",
       address: "Pepper Plantation Area",
     },
-
     coordinates: {
       lat: 10.625,
       lng: 104.17,
     },
-
     nearbyLandmarks: ["Pepper Farm"],
-
     image:
       "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=1400&auto=format&fit=crop",
-
-    gallery: [],
-
+    gallery: [
+      "https://modularassets.cdn.ignitetravel.com/modular_multisite/wp-content/uploads/sites/2/2023/08/29115714/Peppers-Noosa-Resort-And-Villas-Infinity-Pool-1.jpg",
+      "https://www.peppersnoosa.com.au/Portals/0/GalleryImages/System/Peppers/noosa/Approved/Peppers-Noosa-Resort-Villas-3-Bedroom-Deluxe-Villa.t86555.jpg",
+      "https://www.peppers.com.au/Portals/3/Images/Property/PeppersSeminyak/Rooms-960x640px.jpg?ver=2023-01-04-111731-913&timestamp=1672795080409",
+    ],
     price: 220,
     oldPrice: 300,
     currency: "USD",
     priceLabel: "night",
-
     taxesIncluded: true,
-
     rating: 9.3,
     ratingText: "Exceptional",
-
     reviews: 860,
-
     description: "Luxury private villas surrounded by nature.",
-
     available: true,
-
     roomsLeft: 2,
-
     cancellation: "Free cancellation available",
-
     amenities: [
       { name: "Pool", icon: "waves" },
       { name: "Restaurant", icon: "utensils" },
     ],
-
     rooms: [],
-    policies: [],
+    policies: [
+      {
+        title: "Check-in & Check-out",
+        items: [
+          "Check-in after 2:00 PM",
+          "Check-out before 12:00 PM",
+          "Early check-in subject to availability",
+        ],
+      },
+
+      {
+        title: "House Rules",
+        items: [
+          "No smoking inside property",
+          "No pets allowed",
+          "Quiet hours after 10:00 PM",
+        ],
+      },
+
+      {
+        title: "Cancellation Policy",
+        items: [
+          "Free cancellation within 48 hours",
+          "50% refund up to 7 days before arrival",
+          "No refund for same-day cancellation",
+        ],
+      },
+
+      {
+        title: "Safety & Property",
+        items: [
+          "Security cameras in common areas",
+          "Fire extinguisher available",
+          "First aid kit provided",
+        ],
+      },
+
+      {
+        title: "Payment",
+        items: [
+          "Credit cards accepted",
+          "Pay at property available",
+          "Deposit may be required",
+        ],
+      },
+
+      {
+        title: "Amenities Usage",
+        items: [
+          "Pool open from 7 AM - 9 PM",
+          "Gym access included",
+          "Free WiFi throughout property",
+        ],
+      },
+    ],
     host: {},
     reviewsData: [],
   },
@@ -126,154 +211,142 @@ export const kampot = [
     stars: 4,
     featured: false,
     trending: true,
-
     location: {
       city: "Kampot",
       country: "Cambodia",
       address: "Bokor Mountain Road",
     },
-
     coordinates: {
       lat: 10.617,
       lng: 104.02,
     },
-
     nearbyLandmarks: ["Bokor Mountain", "Popokvil Waterfall"],
-
     image:
       "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1400",
-
     gallery: [
       "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1400",
       "https://images.unsplash.com/photo-1522798514-97ceb8c4f1c8?q=80&w=1400",
     ],
-
     price: 170,
     oldPrice: 220,
-
     currency: "USD",
-
     priceLabel: "night",
-
     taxesIncluded: true,
-
     rating: 8.9,
-
     ratingText: "Excellent",
-
     reviews: 230,
-
     description: "Mountain lodge with panoramic views of Kampot.",
-
     available: true,
-
     roomsLeft: 5,
-
     cancellation: "Free cancellation available",
-
     amenities: [
       {
         name: "Pool",
         icon: "waves",
       },
-
       {
         name: "Free WiFi",
         icon: "wifi",
       },
-
       {
         name: "Breakfast",
         icon: "utensils",
       },
     ],
-
     rooms: [
       {
         id: 1,
-
         name: "Deluxe Room",
-
         price: 170,
-
         capacity: "2 Guests",
-
         size: "35m²",
-
         beds: "1 King Bed",
-
         image: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85",
       },
-
       {
         id: 2,
-
         name: "Family Suite",
-
         price: 250,
-
         capacity: "4 Guests",
-
         size: "55m²",
-
         beds: "2 Queen Beds",
-
         image: "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267",
       },
     ],
-
     policies: [
       {
-        title: "Check In",
-
-        items: ["From 2:00 PM", "ID Required"],
+        title: "Check-in & Check-out",
+        items: [
+          "Check-in after 2:00 PM",
+          "Check-out before 12:00 PM",
+          "Early check-in subject to availability",
+        ],
       },
 
       {
-        title: "Check Out",
-
-        items: ["Before 12:00 PM"],
+        title: "House Rules",
+        items: [
+          "No smoking inside property",
+          "No pets allowed",
+          "Quiet hours after 10:00 PM",
+        ],
       },
 
       {
-        title: "Property Rules",
+        title: "Cancellation Policy",
+        items: [
+          "Free cancellation within 48 hours",
+          "50% refund up to 7 days before arrival",
+          "No refund for same-day cancellation",
+        ],
+      },
 
-        items: ["No smoking", "Pets not allowed"],
+      {
+        title: "Safety & Property",
+        items: [
+          "Security cameras in common areas",
+          "Fire extinguisher available",
+          "First aid kit provided",
+        ],
+      },
+
+      {
+        title: "Payment",
+        items: [
+          "Credit cards accepted",
+          "Pay at property available",
+          "Deposit may be required",
+        ],
+      },
+
+      {
+        title: "Amenities Usage",
+        items: [
+          "Pool open from 7 AM - 9 PM",
+          "Gym access included",
+          "Free WiFi throughout property",
+        ],
       },
     ],
-
     host: {
       name: "Sokha Resort Group",
-
       responseRate: "98%",
-
       responseTime: "Within 1 hour",
-
       joined: "Since 2019",
     },
-
     reviewsData: [
       {
         id: 1,
-
         name: "David",
-
         rating: 5,
-
         comment: "Amazing mountain atmosphere.",
-
         date: "2026-02-12",
       },
-
       {
         id: 2,
-
         name: "Maria",
-
         rating: 4,
-
         comment: "Very peaceful stay.",
-
         date: "2026-01-20",
       },
     ],
